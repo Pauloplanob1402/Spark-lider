@@ -1,21 +1,70 @@
-{
-  "appName": "Sparks Líder",
-  "version": "1.0.0",
-  "description": "Frases de liderança em 3 linhas",
-  "premiumPrice": "R$ 14,90",
-  "premiumLabel": "Premium",
-  "watermark": "Gerado no Sparks Líder",
-  "shareText": "✨ Spark do dia via Sparks Líder:",
-  "admob": {
-    "enabled": false,
-    "bannerId": "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX",
-    "interstitialId": "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX"
-  },
-  "features": {
-    "favorites": true,
-    "share": true,
-    "export": true,
-    "premium": true,
-    "ads": true
+'use strict';
+
+/* ─── Estado global ─── */
+const State = {
+  frases:      [],      
+  currentId:   null,    
+  history:     [],      
+  favorites:   [],      
+  username:    '',      
+  isPremium:   false,   
+  view:        'home',  
+  toastTimer:  null,    
+};
+
+const $ = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => ctx.querySelectorAll(sel);
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadFromStorage();
+  loadFrases();
+  registerServiceWorker();
+});
+
+function registerServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log('[SW] Registrado.'))
+      .catch((err) => console.warn('[SW] Falha:', err));
   }
 }
+
+function loadFromStorage() {
+  State.username  = localStorage.getItem('sl_username')  || '';
+  State.isPremium = localStorage.getItem('sl_premium') === 'true';
+  State.favorites = JSON.parse(localStorage.getItem('sl_favorites') || '[]');
+  State.history   = JSON.parse(localStorage.getItem('sl_history')   || '[]');
+}
+
+/* ─── CARREGAR FRASES (CORRIGIDO PARA EVITAR CACHE) ─── */
+async function loadFrases() {
+  try {
+    // O '?v=' + Date.now() força o navegador a buscar o arquivo real no GitHub/Vercel
+    const res = await fetch('./data/frases.json?v=' + Date.now());
+    if (!res.ok) throw new Error('Falha ao carregar frases.');
+    const data = await res.json();
+    if (!Array.isArray(data) || data.length === 0) throw new Error('JSON vazio.');
+    State.frases = data;
+    console.log('[Sparks] Sucesso: ' + data.length + ' frases carregadas.');
+  } catch (err) {
+    console.error('[Sparks] Erro ao carregar frases.json, usando backup:', err);
+    /* Este é o fallback que você está vendo. Se o JSON falha, ele usa estas 3: */
+    State.frases = [
+      { id: 1, text: "Exemplo inspira mais que discurso.\nAção valida palavras.\nSeja o padrão." },
+      { id: 2, text: "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle." },
+      { id: 3, text: "Coragem abre caminhos.\nMedo fecha portas.\nDê o primeiro passo." }
+    ];
+  }
+
+  showScreen('app');
+  setupAppScreen();
+
+  if (!State.username) {
+    showScreen('welcome');
+    setupWelcomeScreen();
+  } else {
+    showRandomFrase();
+  }
+}
+
+/* ... restante do código original (funções de UI, export, etc) continua igual ... */
