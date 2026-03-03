@@ -1,0 +1,29 @@
+{
+  "colors": {
+    "gradientStart": "#0D1B3E",
+    "gradientEnd": "#1565C0",
+    "cardBg": "#FFFFFF",
+    "primary": "#1565C0",
+    "primaryDark": "#0D47A1",
+    "accent": "#42A5F5",
+    "textMain": "#1A1A2E",
+    "textSecondary": "#4A5568",
+    "textLight": "#FFFFFF",
+    "shadow": "rgba(0, 0, 0, 0.18)",
+    "favActive": "#F59E0B",
+    "favInactive": "#CBD5E0",
+    "danger": "#E53E3E"
+  },
+  "typography": {
+    "fontFamily": "'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+    "sizeCard": "clamp(1.15rem, 4vw, 1.45rem)",
+    "sizeName": "1rem",
+    "sizeButton": "0.95rem"
+  },
+  "layout": {
+    "cardRadius": "20px",
+    "buttonRadius": "12px",
+    "cardMaxWidth": "480px",
+    "spacing": "1.5rem"
+  }
+}
