@@ -1,0 +1,21 @@
+{
+  "appName": "Sparks Líder",
+  "version": "1.0.0",
+  "description": "Frases de liderança em 3 linhas",
+  "premiumPrice": "R$ 14,90",
+  "premiumLabel": "Premium",
+  "watermark": "Gerado no Sparks Líder",
+  "shareText": "✨ Spark do dia via Sparks Líder:",
+  "admob": {
+    "enabled": false,
+    "bannerId": "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX",
+    "interstitialId": "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX"
+  },
+  "features": {
+    "favorites": true,
+    "share": true,
+    "export": true,
+    "premium": true,
+    "ads": true
+  }
+}

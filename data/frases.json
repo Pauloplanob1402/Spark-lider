@@ -1,0 +1,1498 @@
+[
+  {
+    "id": 1,
+    "text": "Exemplo inspira mais que discurso.\nAção valida palavras.\nSeja o padrão."
+  },
+  {
+    "id": 2,
+    "text": "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle."
+  },
+  {
+    "id": 3,
+    "text": "Coragem abre caminhos.\nMedo fecha portas.\nDê o primeiro passo."
+  },
+  {
+    "id": 4,
+    "text": "Caráter sustenta liderança.\nCarisma apenas inicia.\nConstrua integridade."
+  },
+  {
+    "id": 5,
+    "text": "Equipes fortes vencem.\nEgos fortes dividem.\nFortaleça o time."
+  },
+  {
+    "id": 6,
+    "text": "Confiança leva tempo.\nDesconfiança nasce rápido.\nSeja consistente."
+  },
+  {
+    "id": 7,
+    "text": "Líderes ouvem primeiro.\nDepois decidem melhor.\nEscute mais hoje."
+  },
+  {
+    "id": 8,
+    "text": "Influência se conquista.\nAutoridade não se impõe.\nGanhe respeito."
+  },
+  {
+    "id": 9,
+    "text": "Visão direciona esforço.\nFalta de visão dispersa energia.\nDefina o rumo."
+  },
+  {
+    "id": 10,
+    "text": "Disciplina vence talento.\nConstância vence impulso.\nMantenha o ritmo."
+  },
+  {
+    "id": 11,
+    "text": "Liderar é servir.\nServir gera lealdade.\nAjude alguém hoje."
+  },
+  {
+    "id": 12,
+    "text": "Resultados revelam liderança.\nDesculpas revelam fraqueza.\nEntregue mais."
+  },
+  {
+    "id": 13,
+    "text": "Mentalidade molda decisões.\nDecisões moldam destinos.\nAjuste sua mente."
+  },
+  {
+    "id": 14,
+    "text": "Times crescem com autonomia.\nControle excessivo sufoca.\nDelegue com confiança."
+  },
+  {
+    "id": 15,
+    "text": "Persistência constrói autoridade.\nDesistência destrói reputação.\nContinue avançando."
+  },
+  {
+    "id": 16,
+    "text": "Energia do líder contagia.\nIndiferença também.\nEleve o clima."
+  },
+  {
+    "id": 17,
+    "text": "Planejamento reduz caos.\nImproviso constante desgasta.\nPrepare-se melhor."
+  },
+  {
+    "id": 18,
+    "text": "Grandes líderes formam líderes.\nChefes formam dependentes.\nDesenvolva pessoas."
+  },
+  {
+    "id": 19,
+    "text": "Problemas revelam liderança.\nConforto esconde potencial.\nAssuma desafios."
+  },
+  {
+    "id": 20,
+    "text": "Comunicação clara evita conflitos.\nAmbiguidade cria ruídos.\nFale com clareza."
+  },
+  {
+    "id": 21,
+    "text": "Credibilidade cresce lentamente.\nPerde-se rapidamente.\nProteja sua palavra."
+  },
+  {
+    "id": 22,
+    "text": "Aprender mantém relevância.\nEstagnar cria obsolescência.\nEstude continuamente."
+  },
+  {
+    "id": 23,
+    "text": "Humildade abre portas.\nArrogância fecha caminhos.\nPermaneça ensinável."
+  },
+  {
+    "id": 24,
+    "text": "Foco cria avanço.\nDistração cria atraso.\nElimine o ruído."
+  },
+  {
+    "id": 25,
+    "text": "Grandes decisões exigem calma.\nPressa gera arrependimento.\nRespire e analise."
+  },
+  {
+    "id": 26,
+    "text": "Times observam atitudes.\nNão apenas instruções.\nDê o exemplo."
+  },
+  {
+    "id": 27,
+    "text": "Confiança gera velocidade.\nDesconfiança gera burocracia.\nConstrua relações sólidas."
+  },
+  {
+    "id": 28,
+    "text": "Erros ensinam líderes.\nOrgulho impede aprendizado.\nCorrija rápido."
+  },
+  {
+    "id": 29,
+    "text": "Visão sem execução é sonho.\nExecução sem visão é desgaste.\nUna os dois."
+  },
+  {
+    "id": 30,
+    "text": "Liderança exige presença.\nAusência gera desordem.\nEsteja disponível."
+  },
+  {
+    "id": 31,
+    "text": "Grandes metas assustam.\nPequenos passos avançam.\nComece agora."
+  },
+  {
+    "id": 32,
+    "text": "Clareza reduz ansiedade.\nIncerteza paralisa.\nDefina prioridades."
+  },
+  {
+    "id": 33,
+    "text": "Resultados constantes geram confiança.\nOscilações geram dúvida.\nSeja previsível."
+  },
+  {
+    "id": 34,
+    "text": "Reconhecimento motiva.\nIndiferença desanima.\nValorize pessoas."
+  },
+  {
+    "id": 35,
+    "text": "Decidir tarde custa caro.\nDecidir cedo direciona.\nEscolha agir."
+  },
+  {
+    "id": 36,
+    "text": "Propósito sustenta esforço.\nFalta de sentido esgota.\nRelembre o motivo."
+  },
+  {
+    "id": 37,
+    "text": "Líderes enfrentam fatos.\nNegação cria crises.\nVeja a realidade."
+  },
+  {
+    "id": 38,
+    "text": "Alto padrão inspira.\nBaixo padrão contamina.\nEleve o nível."
+  },
+  {
+    "id": 39,
+    "text": "A disciplina protege sonhos.\nImpulsos destroem planos.\nControle-se."
+  },
+  {
+    "id": 40,
+    "text": "Confiança começa no líder.\nDepois se espalha.\nInicie o movimento."
+  },
+  {
+    "id": 41,
+    "text": "Relacionamentos constroem influência.\nIsolamento limita impacto.\nConecte-se."
+  },
+  {
+    "id": 42,
+    "text": "Visão repetida cria alinhamento.\nSilêncio cria confusão.\nComunique constantemente."
+  },
+  {
+    "id": 43,
+    "text": "Ação rápida resolve.\nProcrastinação amplia problemas.\nAtaque cedo."
+  },
+  {
+    "id": 44,
+    "text": "Líderes perguntam “como melhorar?”.\nEgos perguntam “quem errou?”.\nBusque progresso."
+  },
+  {
+    "id": 45,
+    "text": "Integridade protege reputações.\nConveniente destrói credibilidade.\nEscolha o certo."
+  },
+  {
+    "id": 46,
+    "text": "Grandes resultados exigem sacrifício.\nConforto mantém mediocridade.\nPague o preço."
+  },
+  {
+    "id": 47,
+    "text": "Confiança cresce com transparência.\nSegredos corroem equipes.\nSeja aberto."
+  },
+  {
+    "id": 48,
+    "text": "Expectativas claras evitam frustrações.\nSuposições criam conflitos.\nDefina acordos."
+  },
+  {
+    "id": 49,
+    "text": "Pequenas vitórias constroem moral.\nFracassos ignorados drenam energia.\nCelebre avanços."
+  },
+  {
+    "id": 50,
+    "text": "Consistência cria autoridade.\nOscilação gera dúvida.\nMantenha padrão."
+  },
+  {
+    "id": 51,
+    "text": "Quem aprende rápido lidera.\nQuem resiste fica para trás.\nAtualize-se."
+  },
+  {
+    "id": 52,
+    "text": "Serviço gera respeito.\nStatus exige respeito.\nEscolha servir."
+  },
+  {
+    "id": 53,
+    "text": "Firmeza com respeito educa.\nAgressividade destrói confiança.\nCorrija com dignidade."
+  },
+  {
+    "id": 54,
+    "text": "Grandes líderes assumem falhas.\nPequenos líderes culpam outros.\nAssuma seus erros."
+  },
+  {
+    "id": 55,
+    "text": "Clareza acelera execução.\nConfusão atrasa projetos.\nSimplifique."
+  },
+  {
+    "id": 56,
+    "text": "O exemplo do líder define cultura.\nRegras apenas reforçam.\nModele comportamentos."
+  },
+  {
+    "id": 57,
+    "text": "Coragem decide destinos.\nMedo preserva limitações.\nAja apesar do medo."
+  },
+  {
+    "id": 58,
+    "text": "Planejar hoje protege amanhã.\nImprovisar sempre desgasta.\nAntecipe-se."
+  },
+  {
+    "id": 59,
+    "text": "A equipe cresce quando aprende.\nTreinamento é investimento.\nEnsine continuamente."
+  },
+  {
+    "id": 60,
+    "text": "Confiança se constrói diariamente.\nPequenas ações acumulam impacto.\nSeja confiável."
+  },
+  {
+    "id": 61,
+    "text": "Direção clara reduz esforço.\nFalta de rumo dispersa energia.\nMostre o caminho."
+  },
+  {
+    "id": 62,
+    "text": "Grandes líderes simplificam.\nComplexidade confunde.\nExplique melhor."
+  },
+  {
+    "id": 63,
+    "text": "Resiliência sustenta jornadas longas.\nDesânimo encerra cedo.\nPermaneça firme."
+  },
+  {
+    "id": 64,
+    "text": "Tempo revela liderança verdadeira.\nAparências não duram.\nConstrua substância."
+  },
+  {
+    "id": 65,
+    "text": "Expectativas altas elevam desempenho.\nExpectativas baixas limitam resultados.\nPeça mais."
+  },
+  {
+    "id": 66,
+    "text": "A cultura segue o comportamento tolerado.\nPermissões definem padrões.\nCorrija desvios."
+  },
+  {
+    "id": 67,
+    "text": "Crescimento exige desconforto.\nZona segura reduz potencial.\nAceite o desafio."
+  },
+  {
+    "id": 68,
+    "text": "Feedback orienta evolução.\nSilêncio perpetua erros.\nConverse com franqueza."
+  },
+  {
+    "id": 69,
+    "text": "Líderes inspiram esperança.\nCinismo destrói motivação.\nEspalhe visão positiva."
+  },
+  {
+    "id": 70,
+    "text": "Direção consistente cria estabilidade.\nMudanças impulsivas geram caos.\nMantenha coerência."
+  },
+  {
+    "id": 71,
+    "text": "Preparação reduz medo.\nImproviso aumenta tensão.\nTreine antes."
+  },
+  {
+    "id": 72,
+    "text": "Influência cresce com serviço contínuo.\nAutoridade vazia não sustenta.\nSirva primeiro."
+  },
+  {
+    "id": 73,
+    "text": "Pequenas decisões diárias moldam liderança.\nGrandes momentos apenas revelam.\nEscolha bem hoje."
+  },
+  {
+    "id": 74,
+    "text": "Autocontrole lidera emoções.\nReações impulsivas prejudicam.\nDomine-se."
+  },
+  {
+    "id": 75,
+    "text": "Grandes equipes pensam juntas.\nTimes frágeis competem internamente.\nPromova união."
+  },
+  {
+    "id": 76,
+    "text": "Visão compartilhada cria energia coletiva.\nObjetivos isolados enfraquecem.\nAlinhe todos."
+  },
+  {
+    "id": 77,
+    "text": "Coragem inspira seguidores.\nHesitação transmite insegurança.\nDecida firme."
+  },
+  {
+    "id": 78,
+    "text": "Reconhecer talentos multiplica resultados.\nIgnorar talentos limita crescimento.\nDescubra potenciais."
+  },
+  {
+    "id": 79,
+    "text": "Aprender com erros acelera progresso.\nNegar erros repete fracassos.\nReflita sempre."
+  },
+  {
+    "id": 80,
+    "text": "Liderança começa pelo autodomínio.\nQuem não se lidera não lidera ninguém.\nComece por si."
+  },
+  {
+    "id": 81,
+    "text": "Clareza de propósito sustenta perseverança.\nFalta de propósito esgota energia.\nReforce o porquê."
+  },
+  {
+    "id": 82,
+    "text": "Grandes líderes constroem confiança antes de exigir desempenho.\nRelacionamento vem primeiro.\nConquiste corações."
+  },
+  {
+    "id": 83,
+    "text": "Disciplina diária vence motivação ocasional.\nConstância cria excelência.\nRepita o essencial."
+  },
+  {
+    "id": 84,
+    "text": "Comunicação honesta fortalece equipes.\nMeias verdades corroem confiança.\nFale com verdade."
+  },
+  {
+    "id": 85,
+    "text": "Decisões difíceis definem líderes.\nDecisões fáceis definem rotina.\nEnfrente o necessário."
+  },
+  {
+    "id": 86,
+    "text": "Pessoas comprometidas produzem milagres.\nPessoas indiferentes produzem atraso.\nEngaje o time."
+  },
+  {
+    "id": 87,
+    "text": "Grandes líderes permanecem aprendizes.\nEstagnação começa quando se acha que sabe tudo.\nContinue curioso."
+  },
+  {
+    "id": 88,
+    "text": "Visão longa evita decisões curtas.\nMiopia estratégica custa caro.\nPense adiante."
+  },
+  {
+    "id": 89,
+    "text": "A atitude do líder define o clima.\nO clima define o desempenho.\nEleve sua postura."
+  },
+  {
+    "id": 90,
+    "text": "Responsabilidade traz crescimento.\nFuga traz estagnação.\nAssuma mais."
+  },
+  {
+    "id": 91,
+    "text": "Liderança exige energia emocional.\nCansaço não gerenciado contamina equipes.\nCuide-se também."
+  },
+  {
+    "id": 92,
+    "text": "Confiança abre portas invisíveis.\nDesconfiança cria barreiras invisíveis.\nSeja confiável."
+  },
+  {
+    "id": 93,
+    "text": "Resultados extraordinários começam com padrões extraordinários.\nExcelência é hábito.\nEleve seus critérios."
+  },
+  {
+    "id": 94,
+    "text": "Líderes criam soluções.\nObservadores criam reclamações.\nSeja solucionador."
+  },
+  {
+    "id": 95,
+    "text": "Influência cresce quando pessoas crescem.\nDesenvolvimento multiplica impacto.\nTreine alguém."
+  },
+  {
+    "id": 96,
+    "text": "Firmeza sem respeito gera resistência.\nFirmeza com respeito gera adesão.\nEquilibre postura."
+  },
+  {
+    "id": 97,
+    "text": "Grandes organizações refletem grandes lideranças.\nCultura começa no topo.\nAssuma o exemplo."
+  },
+  {
+    "id": 98,
+    "text": "Coragem moral protege decisões difíceis.\nConveniência destrói reputações.\nEscolha o certo."
+  },
+  {
+    "id": 99,
+    "text": "Liderança é responsabilidade contínua.\nNão evento ocasional.\nViva diariamente."
+  },
+  {
+    "id": 100,
+    "text": "O mundo segue quem decide avançar.\nHesitação não inspira ninguém.\nAvance hoje."
+  },
+  {
+    "id": 101,
+    "text": "Autoridade cresce com competência.\nCompetência nasce do preparo.\nPrepare-se melhor."
+  },
+  {
+    "id": 102,
+    "text": "Quem assume responsabilidade ganha poder.\nQuem evita responsabilidade perde influência.\nEscolha assumir."
+  },
+  {
+    "id": 103,
+    "text": "Grandes líderes enfrentam conversas difíceis.\nEvitar conflitos cria crises maiores.\nConverse hoje."
+  },
+  {
+    "id": 104,
+    "text": "Consistência cria previsibilidade.\nPrevisibilidade gera confiança.\nMantenha padrões."
+  },
+  {
+    "id": 105,
+    "text": "A velocidade da equipe depende da clareza do líder.\nConfusão desacelera tudo.\nSimplifique instruções."
+  },
+  {
+    "id": 106,
+    "text": "Respeito se constrói na prática diária.\nNão em discursos ocasionais.\nAja corretamente."
+  },
+  {
+    "id": 107,
+    "text": "Quem controla emoções controla decisões.\nImpulsos custam caro.\nDomine-se primeiro."
+  },
+  {
+    "id": 108,
+    "text": "Expectativas claras elevam desempenho.\nExpectativas vagas criam mediocridade.\nDefina metas."
+  },
+  {
+    "id": 109,
+    "text": "Líderes focam no essencial.\nDistrações roubam impacto.\nPriorize melhor."
+  },
+  {
+    "id": 110,
+    "text": "A confiança da equipe depende da previsibilidade do líder.\nOscilações geram insegurança.\nSeja estável."
+  },
+  {
+    "id": 111,
+    "text": "Times comprometidos superam recursos limitados.\nDesalinhamento desperdiça abundância.\nConstrua unidade."
+  },
+  {
+    "id": 112,
+    "text": "Grandes líderes assumem riscos calculados.\nImobilidade garante fracasso lento.\nAvalie e avance."
+  },
+  {
+    "id": 113,
+    "text": "Direção errada com esforço máximo ainda é erro.\nRumo certo multiplica resultados.\nCheque a direção."
+  },
+  {
+    "id": 114,
+    "text": "Liderança exige decisões impopulares às vezes.\nA aprovação constante enfraquece líderes.\nFaça o necessário."
+  },
+  {
+    "id": 115,
+    "text": "Quem cresce sozinho lidera pouco.\nQuem desenvolve outros lidera muito.\nMultiplique pessoas."
+  },
+  {
+    "id": 116,
+    "text": "O silêncio do líder em momentos críticos comunica fraqueza.\nPresença transmite segurança.\nPosicione-se."
+  },
+  {
+    "id": 117,
+    "text": "Grandes líderes constroem sistemas que funcionam sem eles.\nDependência excessiva limita escala.\nEstruture processos."
+  },
+  {
+    "id": 118,
+    "text": "Resultados sustentáveis exigem disciplina invisível.\nApenas esforço visível não basta.\nConstrua rotina."
+  },
+  {
+    "id": 119,
+    "text": "Influência começa pela escuta verdadeira.\nQuem não ouve não compreende.\nEscute profundamente."
+  },
+  {
+    "id": 120,
+    "text": "Equipes seguem direção clara.\nAmbiguidade gera paralisia.\nDefina prioridades."
+  },
+  {
+    "id": 121,
+    "text": "Responsabilidade compartilhada fortalece equipes.\nCentralização excessiva enfraquece.\nDistribua liderança."
+  },
+  {
+    "id": 122,
+    "text": "Coragem não elimina o medo.\nCoragem age apesar dele.\nAvance mesmo assim."
+  },
+  {
+    "id": 123,
+    "text": "Líderes crescem ao ensinar.\nEnsinar organiza pensamento.\nExplique mais."
+  },
+  {
+    "id": 124,
+    "text": "O comportamento tolerado define a cultura real.\nRegras escritas não bastam.\nCorrija desvios."
+  },
+  {
+    "id": 125,
+    "text": "Grandes decisões exigem visão de longo prazo.\nImpulsos favorecem perdas rápidas.\nPense além do hoje."
+  },
+  {
+    "id": 126,
+    "text": "Confiança interna antecede influência externa.\nInsegurança reduz impacto.\nFortaleça sua base."
+  },
+  {
+    "id": 127,
+    "text": "O líder define o ritmo.\nA equipe acompanha.\nEleve o padrão."
+  },
+  {
+    "id": 128,
+    "text": "Falta de feedback cria erros repetidos.\nOrientação acelera evolução.\nDê retorno claro."
+  },
+  {
+    "id": 129,
+    "text": "Resultados coletivos importam mais que vitórias individuais.\nEgo enfraquece times.\nValorize o conjunto."
+  },
+  {
+    "id": 130,
+    "text": "Grandes líderes antecipam problemas.\nReativos vivem apagando incêndios.\nObserve sinais cedo."
+  },
+  {
+    "id": 131,
+    "text": "Influência cresce quando promessas são cumpridas.\nPalavras vazias destroem reputação.\nEntregue o prometido."
+  },
+  {
+    "id": 132,
+    "text": "Equipes seguras inovam mais.\nMedo bloqueia criatividade.\nCrie ambiente seguro."
+  },
+  {
+    "id": 133,
+    "text": "Liderança exige energia contínua.\nNegligenciar saúde reduz impacto.\nCuide-se."
+  },
+  {
+    "id": 134,
+    "text": "Líderes transformam erros em aprendizado coletivo.\nCulpa isolada não ensina.\nAnalise processos."
+  },
+  {
+    "id": 135,
+    "text": "Clareza de papéis evita conflitos.\nConfusão gera disputas internas.\nDefina responsabilidades."
+  },
+  {
+    "id": 136,
+    "text": "Visão sem repetição desaparece.\nReforço constante cria alinhamento.\nRepita a direção."
+  },
+  {
+    "id": 137,
+    "text": "Grandes líderes assumem decisões difíceis rapidamente.\nIndecisão prolonga problemas.\nEscolha agir."
+  },
+  {
+    "id": 138,
+    "text": "Confiança cresce quando líderes admitem limites.\nPerfeição fingida gera distância.\nSeja humano."
+  },
+  {
+    "id": 139,
+    "text": "Times comprometidos executam rápido.\nTimes confusos discutem demais.\nAlinhe objetivos."
+  },
+  {
+    "id": 140,
+    "text": "Disciplina estratégica vence entusiasmo passageiro.\nPersistência gera conquistas.\nContinue firme."
+  },
+  {
+    "id": 141,
+    "text": "A equipe observa prioridades do líder.\nNão apenas discursos.\nMostre com ações."
+  },
+  {
+    "id": 142,
+    "text": "Grandes líderes perguntam antes de ordenar.\nPerguntas ampliam entendimento.\nQuestione mais."
+  },
+  {
+    "id": 143,
+    "text": "Influência aumenta quando você ajuda pessoas a crescer.\nApoio gera lealdade.\nDesenvolva talentos."
+  },
+  {
+    "id": 144,
+    "text": "Líderes fortes mantêm calma sob pressão.\nPânico contamina equipes.\nSeja estável."
+  },
+  {
+    "id": 145,
+    "text": "Execução consistente constrói reputação.\nPromessas constantes não bastam.\nEntregue resultados."
+  },
+  {
+    "id": 146,
+    "text": "Crescimento exige revisão constante de métodos.\nRepetição cega limita evolução.\nAjuste estratégias."
+  },
+  {
+    "id": 147,
+    "text": "Grandes equipes compartilham responsabilidade.\nCulpa individual constante destrói moral.\nConstrua corresponsabilidade."
+  },
+  {
+    "id": 148,
+    "text": "Decisões estratégicas exigem informação confiável.\nSuposições geram erros caros.\nBusque dados."
+  },
+  {
+    "id": 149,
+    "text": "Confiança cresce quando líderes protegem suas equipes.\nExposição injusta destrói lealdade.\nAssuma a frente."
+  },
+  {
+    "id": 150,
+    "text": "Liderança exige aprender continuamente.\nConhecimento antigo envelhece rápido.\nAtualize-se."
+  },
+  {
+    "id": 151,
+    "text": "Grandes líderes celebram progresso.\nIgnorar avanços reduz motivação.\nReconheça conquistas."
+  },
+  {
+    "id": 152,
+    "text": "Times seguem líderes coerentes.\nContradições reduzem respeito.\nAlinhe discurso e prática."
+  },
+  {
+    "id": 153,
+    "text": "Resultados excepcionais exigem padrões excepcionais.\nMediocridade é contagiosa.\nEleve critérios."
+  },
+  {
+    "id": 154,
+    "text": "Líderes eficazes escolhem batalhas certas.\nEnergia desperdiçada enfraquece foco.\nPriorize conflitos."
+  },
+  {
+    "id": 155,
+    "text": "A equipe cresce quando recebe autonomia guiada.\nLiberdade sem direção gera caos.\nOriente e confie."
+  },
+  {
+    "id": 156,
+    "text": "Influência duradoura nasce de valores claros.\nOportunismo reduz credibilidade.\nDefina princípios."
+  },
+  {
+    "id": 157,
+    "text": "Grandes líderes enfrentam dados desconfortáveis.\nIgnorar fatos não resolve problemas.\nEncare números."
+  },
+  {
+    "id": 158,
+    "text": "Velocidade estratégica depende de decisões simples.\nComplexidade excessiva trava execução.\nSimplifique processos."
+  },
+  {
+    "id": 159,
+    "text": "Confiança externa começa pela cultura interna.\nEquipes fortes sustentam marcas fortes.\nFortaleça dentro."
+  },
+  {
+    "id": 160,
+    "text": "Liderança cresce com responsabilidade progressiva.\nEvitar desafios limita expansão.\nAceite novos níveis."
+  },
+  {
+    "id": 161,
+    "text": "Grandes líderes criam sucessores.\nLiderança isolada termina cedo.\nPrepare substitutos."
+  },
+  {
+    "id": 162,
+    "text": "A disciplina invisível constrói vitórias visíveis.\nBastidores definem palco.\nTreine diariamente."
+  },
+  {
+    "id": 163,
+    "text": "Times confiantes arriscam mais.\nTimes inseguros evitam crescimento.\nConstrua segurança."
+  },
+  {
+    "id": 164,
+    "text": "Influência aumenta quando líderes compartilham crédito.\nApropriar-se de conquistas destrói confiança.\nReconheça a equipe."
+  },
+  {
+    "id": 165,
+    "text": "Grandes líderes corrigem rápido pequenos erros.\nIgnorar cedo cria crises depois.\nAja cedo."
+  },
+  {
+    "id": 166,
+    "text": "Direção clara reduz desgaste emocional.\nIncerteza prolongada esgota equipes.\nMostre o rumo."
+  },
+  {
+    "id": 167,
+    "text": "Líderes eficazes transformam pressão em foco.\nDistração transforma pressão em caos.\nConcentre-se."
+  },
+  {
+    "id": 168,
+    "text": "Cultura organizacional é construída diariamente.\nNão em eventos ocasionais.\nModele comportamentos."
+  },
+  {
+    "id": 169,
+    "text": "Confiança cresce quando decisões são explicadas.\nMistério gera resistência.\nComunique razões."
+  },
+  {
+    "id": 170,
+    "text": "Grandes líderes criam oportunidades para outros brilharem.\nCentralizar protagonismo limita crescimento.\nAbra espaço."
+  },
+  {
+    "id": 171,
+    "text": "A equipe reflete a mentalidade do líder.\nNegatividade se replica rapidamente.\nCultive otimismo realista."
+  },
+  {
+    "id": 172,
+    "text": "Resultados sustentáveis exigem constância invisível.\nEsforços esporádicos não bastam.\nSeja regular."
+  },
+  {
+    "id": 173,
+    "text": "Líderes fortes enfrentam responsabilidades maiores.\nFuga de responsabilidade reduz relevância.\nAssuma mais."
+  },
+  {
+    "id": 174,
+    "text": "Grandes decisões exigem ouvir múltiplas perspectivas.\nVisão limitada gera erros estratégicos.\nConsulte pessoas."
+  },
+  {
+    "id": 175,
+    "text": "Influência cresce quando líderes entregam antes de cobrar.\nExemplo antecede exigência.\nMostre primeiro."
+  },
+  {
+    "id": 176,
+    "text": "Times motivados conhecem o propósito do trabalho.\nTrabalho sem sentido desanima.\nExplique o impacto."
+  },
+  {
+    "id": 177,
+    "text": "Confiança coletiva nasce de vitórias compartilhadas.\nExperiências comuns fortalecem equipes.\nConstrua conquistas conjuntas."
+  },
+  {
+    "id": 178,
+    "text": "Grandes líderes protegem o foco estratégico.\nUrgências constantes desviam direção.\nDefenda prioridades."
+  },
+  {
+    "id": 179,
+    "text": "Liderança exige clareza emocional.\nConfusão interna cria decisões fracas.\nOrganize pensamentos."
+  },
+  {
+    "id": 180,
+    "text": "A confiança cresce quando líderes permanecem acessíveis.\nDistância excessiva cria barreiras.\nEsteja próximo."
+  },
+  {
+    "id": 181,
+    "text": "Grandes equipes aprendem rápido após erros.\nRepetição de falhas indica falta de análise.\nRevise processos."
+  },
+  {
+    "id": 182,
+    "text": "Influência cresce com consistência moral.\nValores instáveis geram desconfiança.\nSeja previsível."
+  },
+  {
+    "id": 183,
+    "text": "Resultados dependem do padrão aceito.\nO que é tolerado se repete.\nAjuste limites."
+  },
+  {
+    "id": 184,
+    "text": "Grandes líderes tomam decisões baseadas em propósito.\nConveniente raramente é estratégico.\nEscolha o relevante."
+  },
+  {
+    "id": 185,
+    "text": "Confiança é construída em pequenas interações diárias.\nNão apenas em grandes gestos.\nCuide dos detalhes."
+  },
+  {
+    "id": 186,
+    "text": "Times fortes discutem ideias.\nTimes frágeis discutem pessoas.\nEleve o nível."
+  },
+  {
+    "id": 187,
+    "text": "Grandes líderes mantêm visão mesmo em crises.\nDesespero encurta horizonte.\nPense adiante."
+  },
+  {
+    "id": 188,
+    "text": "A equipe cresce quando entende critérios de sucesso.\nAmbiguidade gera ansiedade.\nDefina métricas."
+  },
+  {
+    "id": 189,
+    "text": "Influência verdadeira permanece mesmo sem autoridade formal.\nPosição é temporária.\nConstrua respeito."
+  },
+  {
+    "id": 190,
+    "text": "Grandes líderes protegem tempo estratégico.\nAgenda caótica destrói foco.\nBloqueie prioridades."
+  },
+  {
+    "id": 191,
+    "text": "Resultados extraordinários exigem decisões extraordinárias.\nZona confortável limita conquistas.\nOuse escolher."
+  },
+  {
+    "id": 192,
+    "text": "Confiança cresce quando líderes mantêm promessas pequenas.\nGrandes promessas começam nos detalhes.\nCumpra sempre."
+  },
+  {
+    "id": 193,
+    "text": "Grandes líderes transformam visão em metas claras.\nSonhos vagos não mobilizam equipes.\nDefina objetivos."
+  },
+  {
+    "id": 194,
+    "text": "Times confiantes executam com velocidade.\nDúvidas internas atrasam tudo.\nFortaleça segurança."
+  },
+  {
+    "id": 195,
+    "text": "Influência cresce quando líderes reconhecem contribuições individuais.\nVisibilidade gera motivação.\nValorize pessoas."
+  },
+  {
+    "id": 196,
+    "text": "Grandes líderes priorizam aprendizado contínuo da equipe.\nConhecimento parado reduz competitividade.\nInvista em treinamento."
+  },
+  {
+    "id": 197,
+    "text": "A equipe observa como o líder reage à pressão.\nReações moldam cultura.\nMantenha equilíbrio."
+  },
+  {
+    "id": 198,
+    "text": "Resultados consistentes nascem de hábitos consistentes.\nMudanças esporádicas não sustentam sucesso.\nConstrua rotinas."
+  },
+  {
+    "id": 199,
+    "text": "Grandes líderes constroem confiança antes de exigir velocidade.\nBase sólida acelera depois.\nFortaleça fundamentos."
+  },
+  {
+    "id": 200,
+    "text": "Liderança verdadeira deixa pessoas melhores após cada interação.\nImpacto humano define legado.\nEleve quem está perto."
+  },
+  {
+    "id": 201,
+    "text": "Visão clara atrai seguidores.\nAmbiguidade dispersa o foco.\nMostre o caminho e inspire confiança."
+  },
+  {
+    "id": 202,
+    "text": "Líderes crescem ao empoderar outros.\nLíderes fracos se aproveitam do poder.\nInvista no crescimento dos outros."
+  },
+  {
+    "id": 203,
+    "text": "Conflitos não são falhas.\nA resolução constrói confiança.\nEncare os desafios como oportunidades."
+  },
+  {
+    "id": 204,
+    "text": "Padrões altos inspiram resultados extraordinários.\nMediocridade atrai mediocridade.\nEstabeleça critérios elevados."
+  },
+  {
+    "id": 205,
+    "text": "Feedback orienta evolução.\nSilêncio perpetua erros.\nDê orientação com clareza e compaixão."
+  },
+  {
+    "id": 206,
+    "text": "A verdadeira liderança está no serviço.\nO ego bloqueia o impacto.\nSirva seu time e sua influência crescerá."
+  },
+  {
+    "id": 207,
+    "text": "Tome decisões com coragem.\nA hesitação enfraquece a liderança.\nAja, mesmo diante do medo."
+  },
+  {
+    "id": 208,
+    "text": "Liderança exige consistência.\nMudanças impulsivas criam caos.\nMantenha o rumo com estabilidade."
+  },
+  {
+    "id": 209,
+    "text": "Cultura reflete o comportamento do líder.\nRegras não moldam comportamento, ações sim.\nModele os valores que você preza."
+  },
+  {
+    "id": 210,
+    "text": "Resiliência constrói líderes duradouros.\nDesânimo encerra jornadas prematuramente.\nPermaneça firme diante da adversidade."
+  },
+  {
+    "id": 211,
+    "text": "A visão conecta.\nA falta de clareza desconecta.\nReforce constantemente o objetivo comum."
+  },
+  {
+    "id": 212,
+    "text": "Liderança começa com autoconhecimento.\nQuem não se conhece, não pode guiar outros.\nInvista no seu próprio desenvolvimento."
+  },
+  {
+    "id": 213,
+    "text": "O líder não teme falhas.\nO erro é uma lição.\nCorrija rapidamente e aprenda sempre."
+  },
+  {
+    "id": 214,
+    "text": "A confiança é construída com pequenos gestos.\nPromessas grandes não bastam.\nCumpra o que você prometeu, todos os dias."
+  },
+  {
+    "id": 215,
+    "text": "Grande liderança exige responsabilidade.\nFuga de responsabilidades enfraquece a equipe.\nAssuma as rédeas e inspire seu time."
+  },
+  {
+    "id": 216,
+    "text": "A liderança sem feedback é cega.\nErrar sem aprender é estagnar.\nConverse abertamente sobre melhorias."
+  },
+  {
+    "id": 217,
+    "text": "Desenvolver pessoas é o maior legado de um líder.\nObter resultados sem investir em gente é vazio.\nConstrua sucessores e fortaleça a equipe."
+  },
+  {
+    "id": 218,
+    "text": "O líder inspira mais pelo exemplo do que pelas palavras.\nA ação fala mais alto que o discurso.\nSeja o padrão que você espera dos outros."
+  },
+  {
+    "id": 219,
+    "text": "O verdadeiro líder tem visão de longo prazo.\nDecisões apressadas podem custar caro.\nPense no impacto a longo prazo de cada ação."
+  },
+  {
+    "id": 220,
+    "text": "A autenticidade constrói lealdade.\nMáscaras criam desconfiança.\nSeja genuíno em todas as interações."
+  },
+  {
+    "id": 221,
+    "text": "A verdadeira liderança começa com confiança.\nSem confiança, tudo desmorona.\nConstrua uma base sólida."
+  },
+  {
+    "id": 222,
+    "text": "Liderar é guiar, não controlar.\nControle limita, liderança liberta.\nDê espaço para o crescimento dos outros."
+  },
+  {
+    "id": 223,
+    "text": "A transparência cria alianças.\nSegredos geram desconfiança.\nSeja claro e honesto em suas intenções."
+  },
+  {
+    "id": 224,
+    "text": "Respostas rápidas geram ação.\nProcrastinação cria estagnação.\nDecida agora, avance sempre."
+  },
+  {
+    "id": 225,
+    "text": "A liderança é construída no dia a dia.\nPequenos gestos criam grandes resultados.\nSeja consistente, não apenas inspirador."
+  },
+  {
+    "id": 226,
+    "text": "Ação é a prova da liderança.\nPalavras sem ação são vazias.\nComprove com feitos."
+  },
+  {
+    "id": 227,
+    "text": "Líderes não temem a mudança.\nMudança é o caminho do progresso.\nAdapte-se, inove e evolua."
+  },
+  {
+    "id": 228,
+    "text": "A equipe se espelha no líder.\nSeja o exemplo que você quer ver.\nInspire, não apenas instrua."
+  },
+  {
+    "id": 229,
+    "text": "Liderança é sobre empatia.\nIgnorar sentimentos gera distanciamento.\nOuça com atenção e compreensão."
+  },
+  {
+    "id": 230,
+    "text": "Grandes líderes tomam responsabilidade.\nCulpar os outros enfraquece a equipe.\nSeja o primeiro a assumir falhas."
+  },
+  {
+    "id": 231,
+    "text": "O verdadeiro líder aprende com os erros.\nFalhas não são fim, são aprendizado.\nCorrija rapidamente e siga em frente."
+  },
+  {
+    "id": 232,
+    "text": "Influência se conquista com autenticidade.\nMáscaras geram desconfiança.\nSeja você mesmo, sempre."
+  },
+  {
+    "id": 233,
+    "text": "Equipes fortes se constroem com apoio.\nFalta de suporte gera desmotivação.\nInvista no desenvolvimento do grupo."
+  },
+  {
+    "id": 234,
+    "text": "A coragem é a base da liderança.\nO medo paralisa, a coragem impulsiona.\nDecida-se a agir apesar do medo."
+  },
+  {
+    "id": 235,
+    "text": "Liderar é servir ao time.\nServiço gera lealdade, ego cria resistência.\nColoque os outros primeiro."
+  },
+  {
+    "id": 236,
+    "text": "A liderança exige autoconfiança.\nInsegurança transmite dúvida.\nAcredite em si e nos outros."
+  },
+  {
+    "id": 237,
+    "text": "Comunique com clareza.\nAmbiguidade gera incerteza.\nFale direto e com propósito."
+  },
+  {
+    "id": 238,
+    "text": "Confiança é conquistada, não imposta.\nImposição cria resistência.\nGanhe respeito com ações consistentes."
+  },
+  {
+    "id": 239,
+    "text": "Visão sem ação é sonho.\nAção sem visão é desperdício.\nUna os dois para resultados reais."
+  },
+  {
+    "id": 240,
+    "text": "Grande liderança começa com humildade.\nArrogância impede o aprendizado.\nMantenha-se aberto e receptivo."
+  },
+  {
+    "id": 241,
+    "text": "Liderança não é sobre títulos.\nÉ sobre impacto e influência.\nConquiste através da ação."
+  },
+  {
+    "id": 242,
+    "text": "Integridade é a fundação da liderança.\nMentiras destroem a confiança.\nSeja sempre honesto, mesmo nas dificuldades."
+  },
+  {
+    "id": 243,
+    "text": "Liderança exige coragem moral.\nFugir das verdades difíceis enfraquece.\nEnfrente os desafios com ética."
+  },
+  {
+    "id": 244,
+    "text": "Equipes de sucesso se constroem com confiança.\nDesconfiança desacelera qualquer progresso.\nCultive a confiança diariamente."
+  },
+  {
+    "id": 245,
+    "text": "A liderança é sobre crescimento contínuo.\nEstagnar é retroceder.\nBusque sempre aprender e evoluir."
+  },
+  {
+    "id": 246,
+    "text": "O exemplo do líder é a cultura da empresa.\nRegras sem exemplo falham.\nModele comportamentos positivos."
+  },
+  {
+    "id": 247,
+    "text": "Autenticidade cria relacionamentos duradouros.\nMáscaras geram conexões superficiais.\nSeja verdadeiro e genuíno."
+  },
+  {
+    "id": 248,
+    "text": "O líder não é perfeito.\nMas deve ser transparente sobre suas falhas.\nAceite as imperfeições, aprenda com elas."
+  },
+  {
+    "id": 249,
+    "text": "Grandes líderes não buscam reconhecimento.\nEles entregam resultados e deixam o legado.\nFoque no impacto, não no aplauso."
+  },
+  {
+    "id": 250,
+    "text": "Liderança é sobre visão compartilhada.\nObjetivos isolados criam desunião.\nAlinhe todos no mesmo propósito."
+  },
+  {
+    "id": 251,
+    "text": "Liderança exige energia emocional.\nCansaço emocional enfraquece a equipe.\nCuide de si para cuidar dos outros."
+  },
+  {
+    "id": 252,
+    "text": "Grande liderança é sinônimo de responsabilidade.\nFugir da responsabilidade enfraquece a equipe.\nAssuma o comando, com humildade e coragem."
+  },
+  {
+    "id": 253,
+    "text": "A clareza de propósito motiva.\nIncerteza paralisa.\nDeixe claro o \"porquê\" do trabalho."
+  },
+  {
+    "id": 254,
+    "text": "Liderança se constrói todos os dias.\nCada ação conta.\nSeja intencional nas suas escolhas diárias."
+  },
+  {
+    "id": 255,
+    "text": "O líder nunca para de aprender.\nA estagnação é a morte da liderança.\nSeja curioso e busque sempre mais conhecimento."
+  },
+  {
+    "id": 256,
+    "text": "A liderança é sobre gerar resultados.\nFalar sem fazer é apenas conversa.\nEntregue mais do que promete."
+  },
+  {
+    "id": 257,
+    "text": "Líderes inspiram confiança com consistência.\nOscilações criam desconfiança.\nSeja estável em suas decisões."
+  },
+  {
+    "id": 258,
+    "text": "Grande liderança é sobre servir aos outros.\nServir cria seguidores fiéis.\nColoque o time à frente de si."
+  },
+  {
+    "id": 259,
+    "text": "A liderança sem feedback não evolui.\nOuvir fortalece, ignorar enfraquece.\nBusque sempre feedback construtivo."
+  },
+  {
+    "id": 260,
+    "text": "O líder é o exemplo.\nAtitudes falam mais que palavras.\nSeja o que você espera dos outros."
+  },
+  {
+    "id": 261,
+    "text": "Líderes investem no bem-estar do time.\nA negligência destrói a moral.\nCuide do seu time, e ele cuidará de você."
+  },
+  {
+    "id": 262,
+    "text": "Visão sem execução é ineficaz.\nExecução sem visão é desperdício.\nCombine os dois para conquistar grandes resultados."
+  },
+  {
+    "id": 263,
+    "text": "Liderança é sobre influenciar positivamente.\nAutoritarismo gera resistência.\nConstrua sua influência com respeito e ações."
+  },
+  {
+    "id": 264,
+    "text": "O líder deve ser acessível.\nDistância cria barreiras.\nEsteja próximo ao seu time."
+  },
+  {
+    "id": 265,
+    "text": "A cultura organizacional é liderada pelo exemplo.\nAções falam mais que qualquer política.\nModele os comportamentos que deseja ver."
+  },
+  {
+    "id": 266,
+    "text": "Liderança é sobre decisões difíceis.\nEvitar decisões difíceis custa caro.\nFaça o que é necessário, não o que é fácil."
+  },
+  {
+    "id": 267,
+    "text": "Grandes líderes sabem que precisam de um time forte.\nA arrogância enfraquece a equipe.\nValorize as contribuições de cada um."
+  },
+  {
+    "id": 268,
+    "text": "Grande liderança exige coragem emocional.\nO medo pode ser paralisante.\nAja mesmo com receio, inspire a confiança."
+  },
+  {
+    "id": 269,
+    "text": "Liderança é sobre transformar desafios em oportunidades.\nFicar paralisado só piora a situação.\nEnfrente os obstáculos com criatividade."
+  },
+  {
+    "id": 270,
+    "text": "Equipes fortes se baseiam na confiança mútua.\nDesconfiança destrói o trabalho em equipe.\nConstrua laços de confiança constantemente."
+  },
+  {
+    "id": 271,
+    "text": "A liderança deve ser orientada para resultados.\nDistrações criam desvio de foco.\nMantenha o objetivo claro e foco no que importa."
+  },
+  {
+    "id": 272,
+    "text": "Líderes buscam soluções, não culpados.\nCulpar enfraquece a equipe.\nEncontre soluções e avance rapidamente."
+  },
+  {
+    "id": 273,
+    "text": "Liderança é influenciar ações.\nControle cria resistência.\nInspire, não imponha."
+  },
+  {
+    "id": 274,
+    "text": "A verdadeira liderança é invisível.\nLíderes eficazes fazem o time brilhar.\nDê visibilidade ao seu time, não a si mesmo."
+  },
+  {
+    "id": 275,
+    "text": "Um líder deve ser confiável.\nA confiança é conquistada, não dada.\nSeja consistente e confiável todos os dias."
+  },
+  {
+    "id": 276,
+    "text": "A liderança é sobre servir aos outros.\nO ego destrói relacionamentos.\nEsteja disposto a servir, não apenas a comandar."
+  },
+  {
+    "id": 277,
+    "text": "Liderança começa com autoconhecimento.\nLíderes que não se conhecem falham em guiar outros.\nInvista no seu autodesenvolvimento."
+  },
+  {
+    "id": 278,
+    "text": "Liderança sem feedback é cega.\nFeedback constante acelera a evolução.\nOfereça e busque críticas construtivas."
+  },
+  {
+    "id": 279,
+    "text": "A liderança verdadeira envolve sacrifícios.\nO conforto mantém a mediocridade.\nPague o preço para ver grandes resultados."
+  },
+  {
+    "id": 280,
+    "text": "Líderes criam mais líderes.\nChefes criam seguidores.\nEmpodere sua equipe para o sucesso coletivo."
+  },
+  {
+    "id": 281,
+    "text": "O verdadeiro líder escuta.\nEscutar é o primeiro passo para entender.\nDê voz àqueles ao seu redor."
+  },
+  {
+    "id": 282,
+    "text": "A transparência fortalece a confiança.\nSegredos minam a colaboração.\nSeja aberto e honesto com seu time."
+  },
+  {
+    "id": 283,
+    "text": "Liderança é sobre transformação.\nTransforme o ambiente, não apenas os resultados.\nInspire sua equipe a evoluir constantemente."
+  },
+  {
+    "id": 284,
+    "text": "Líderes não evitam desafios.\nDesafios são oportunidades disfarçadas.\nEnfrente os problemas com confiança."
+  },
+  {
+    "id": 285,
+    "text": "Liderança exige foco.\nDistração atrasa o progresso.\nMantenha a mente e as ações direcionadas."
+  },
+  {
+    "id": 286,
+    "text": "Líderes sabem quando delegar.\nMicrogestão sufoca a criatividade.\nConfie em sua equipe para prosperar."
+  },
+  {
+    "id": 287,
+    "text": "A liderança é sobre servir com humildade.\nArrogância prejudica a liderança.\nColoque os outros à frente e ganhe respeito."
+  },
+  {
+    "id": 288,
+    "text": "A visão sem execução não é nada.\nExecução sem visão é desperdício.\nCombine ambos para alcançar grandes resultados."
+  },
+  {
+    "id": 289,
+    "text": "Liderança é sobre ajudar outros a crescer.\nIgnorar o potencial de sua equipe é um erro.\nInvista no desenvolvimento contínuo dos outros."
+  },
+  {
+    "id": 290,
+    "text": "Liderança forte é construída sobre princípios sólidos.\nSem princípios, a liderança se perde.\nMantenha-se firme nos valores fundamentais."
+  },
+  {
+    "id": 291,
+    "text": "Grandes líderes tomam decisões com coragem.\nO medo atrasa a ação.\nTome decisões com confiança e clareza."
+  },
+  {
+    "id": 292,
+    "text": "A liderança sem clareza é ineficaz.\nAmbiguidade gera frustração.\nSeja claro em suas expectativas e objetivos."
+  },
+  {
+    "id": 293,
+    "text": "Liderança é sobre impactar vidas.\nResultados sem impacto são vazios.\nFaça a diferença positiva na vida das pessoas."
+  },
+  {
+    "id": 294,
+    "text": "O verdadeiro líder não busca aprovação.\nAprovadores não criam grandes mudanças.\nLidere com coragem e sem medo de desagradar."
+  },
+  {
+    "id": 295,
+    "text": "A consistência constrói credibilidade.\nOscilações enfraquecem a confiança.\nSeja constante e confiável."
+  },
+  {
+    "id": 296,
+    "text": "Grandes líderes se adaptam.\nRigidez cria estagnação.\nSeja flexível e aberto a novas ideias."
+  },
+  {
+    "id": 297,
+    "text": "Liderança é mais do que saber o caminho.\nÉ também saber como guiar outros ao longo dele.\nMostre o caminho, mas caminhe com sua equipe."
+  },
+  {
+    "id": 298,
+    "text": "Liderança não é sobre estar na frente.\nÉ sobre estar com a equipe, guiando e apoiando.\nCresça com sua equipe, não apenas na frente dela."
+  },
+  {
+    "id": 299,
+    "text": "Liderança exige ação.\nPalavras vazias não movem montanhas.\nAja com propósito e determinação."
+  },
+  {
+    "id": 300,
+    "text": "Grandes líderes têm coragem para dizer a verdade.\nA verdade liberta, mentiras aprisionam.\nFale com sinceridade, mesmo quando for difícil."
+  },
+  {
+    "id": 301,
+    "text": "Liderança é sobre criar conexões.\nConexões criam confiança, falta delas gera isolamento.\nConstrua relações autênticas e de apoio."
+  },
+  {
+    "id": 302,
+    "text": "Líderes focam no futuro, não apenas no presente.\nO futuro é construído no presente.\nPlaneje, execute e evolua com visão a longo prazo."
+  },
+  {
+    "id": 303,
+    "text": "A liderança exige um equilíbrio de firmeza e flexibilidade.\nExcesso de rigidez cria resistência.\nAdapte-se conforme necessário, sem perder seus valores."
+  },
+  {
+    "id": 304,
+    "text": "Grandes líderes reconhecem o esforço do time.\nA indiferença destrói a motivação.\nCelebre as vitórias e o progresso de sua equipe."
+  },
+  {
+    "id": 305,
+    "text": "A verdadeira liderança é servidora.\nLíderes servem aos outros, não a si mesmos.\nColoque os outros em primeiro lugar."
+  },
+  {
+    "id": 306,
+    "text": "A liderança é sobre inspirar ações, não apenas palavras.\nPalavras sem ação são vazias.\nSeja a mudança que você deseja ver."
+  },
+  {
+    "id": 307,
+    "text": "Liderança é feita de escolhas difíceis.\nEvitar decisões difíceis só cria problemas maiores.\nEnfrente a adversidade com coragem."
+  },
+  {
+    "id": 308,
+    "text": "Liderança é mais sobre ação do que sobre discurso.\nOs resultados falam por si.\nMostre com o que você faz, não só com o que diz."
+  },
+  {
+    "id": 309,
+    "text": "O verdadeiro líder aprende com os outros.\nA arrogância impede o aprendizado.\nEsteja sempre disposto a ouvir e aprender."
+  },
+  {
+    "id": 310,
+    "text": "Liderança é sobre guiar, não controlar.\nControle limita a inovação.\nGuie sua equipe com confiança e apoio."
+  },
+  {
+    "id": 311,
+    "text": "Liderança é sobre criar um legado, não apenas resultados imediatos.\nGrandes líderes pensam no impacto a longo prazo.\nConstrua algo duradouro e significativo."
+  },
+  {
+    "id": 312,
+    "text": "A liderança é construída sobre integridade.\nSem integridade, não há liderança verdadeira.\nSeja íntegro em todas as suas ações."
+  },
+  {
+    "id": 313,
+    "text": "Liderança é sobre escolher a ação, não a procrastinação.\nAdiar cria mais problemas.\nDecida agora e avance com confiança."
+  },
+  {
+    "id": 314,
+    "text": "Liderança forte é construída em confiança.\nDesconfiança enfraquece qualquer equipe.\nConstrua e mantenha a confiança constantemente."
+  },
+  {
+    "id": 315,
+    "text": "Liderança não é sobre ser perfeito.\nÉ sobre ser real e acessível.\nSeja transparente e vulnerável com sua equipe."
+  },
+  {
+    "id": 316,
+    "text": "Liderança exige visão clara.\nA falta de visão cria desorientação.\nDefina um propósito claro e guie sua equipe."
+  },
+  {
+    "id": 317,
+    "text": "Grandes líderes sabem a diferença entre urgência e importância.\nFocar no urgente às vezes impede o progresso real.\nPriorize o que realmente faz a diferença."
+  },
+  {
+    "id": 318,
+    "text": "Liderança é sobre assumir responsabilidades.\nEvitar responsabilidades cria falhas.\nSeja o primeiro a assumir os desafios."
+  },
+  {
+    "id": 319,
+    "text": "Liderança é sobre capacitar outros para o sucesso.\nCriar dependência enfraquece a equipe.\nEmpodere sua equipe para alcançar grandes resultados."
+  },
+  {
+    "id": 320,
+    "text": "Grandes líderes inspiram o que é possível.\nLíderes fracos destacam as limitações.\nMostre às pessoas o que elas podem alcançar."
+  },
+  {
+    "id": 321,
+    "text": "Liderança não é sobre posição, mas impacto.\nA verdadeira liderança é medida pelo impacto que você gera.\nBusque sempre deixar uma marca positiva."
+  },
+  {
+    "id": 322,
+    "text": "Liderança é sobre servir com propósito.\nA liderança sem propósito é vazia.\nEncontre o seu \"porquê\" e inspire os outros."
+  },
+  {
+    "id": 323,
+    "text": "Grandes líderes buscam progresso, não perfeição.\nA perfeição paralisa, o progresso avança.\nAbrace a jornada de melhoria contínua."
+  },
+  {
+    "id": 324,
+    "text": "Liderança é sobre desafiar o status quo.\nAcomodar-se é retroceder.\nQuestione o normal e busque sempre inovar."
+  },
+  {
+    "id": 325,
+    "text": "Liderança é sobre inspirar confiança em tempos difíceis.\nA crise revela a verdadeira liderança.\nMantenha a calma e guie sua equipe com serenidade."
+  },
+  {
+    "id": 326,
+    "text": "A liderança sem emoção é fria.\nLíderes emocionais criam conexões profundas.\nCompartilhe sua visão e entusiasmo com sua equipe."
+  },
+  {
+    "id": 327,
+    "text": "Liderança é sobre resolver problemas, não criar mais.\nEvitando problemas, você cria mais.\nEnfrente desafios de frente e com soluções claras."
+  },
+  {
+    "id": 328,
+    "text": "Líderes moldam o futuro, não ficam presos ao passado.\nViver no passado impede o progresso.\nConcentre-se no futuro e no que você pode criar."
+  },
+  {
+    "id": 329,
+    "text": "Liderança é sobre integrar habilidades.\nLíderes sozinhos não vão longe.\nCombine forças e habilidades para conquistar mais."
+  },
+  {
+    "id": 330,
+    "text": "Líderes inspiram através de ações, não promessas.\nPalavras vazias não movem montanhas.\nComprove sua liderança com resultados reais."
+  },
+  {
+    "id": 331,
+    "text": "Liderança é sobre fazer os outros brilharem.\nChefes tomam os créditos, líderes os dividem.\nCompartilhe o sucesso, incentive o crescimento."
+  },
+  {
+    "id": 332,
+    "text": "Grandes líderes sabem que o aprendizado nunca para.\nIgnorar o aprendizado cria estagnação.\nSeja um eterno aprendiz e inspire sua equipe a fazer o mesmo."
+  },
+  {
+    "id": 333,
+    "text": "Liderança exige coragem para enfrentar o desconhecido.\nO medo do desconhecido paralisa.\nDê o primeiro passo, mesmo sem ter todas as respostas."
+  },
+  {
+    "id": 334,
+    "text": "Liderança é sobre criar um ambiente de confiança.\nFalta de confiança cria barreiras.\nConstrua pontes e não muros com sua equipe."
+  },
+  {
+    "id": 335,
+    "text": "Liderança verdadeira é ser fiel aos seus valores.\nSer inconsistente mina a confiança.\nMantenha seus princípios firmes, mesmo em tempos desafiadores."
+  },
+  {
+    "id": 336,
+    "text": "Grandes líderes lideram pelo exemplo, não por autoridade.\nAutoridade imposta gera resistência.\nSeja o padrão que deseja ver no time."
+  },
+  {
+    "id": 337,
+    "text": "Liderança é sobre agregar valor às vidas.\nFazer mais por outros gera um impacto duradouro.\nInvista no crescimento pessoal e profissional de sua equipe."
+  },
+  {
+    "id": 338,
+    "text": "A liderança se baseia em decisões conscientes.\nDecisões impulsivas geram erros.\nPondere antes de agir e planeje com clareza."
+  },
+  {
+    "id": 339,
+    "text": "Líderes sabem que a falha é um passo para o sucesso.\nIgnorar os erros impede o aprendizado.\nAprenda com cada falha e cresça com ela."
+  },
+  {
+    "id": 340,
+    "text": "Liderança é sobre ter um propósito claro.\nFalta de propósito cria desorientação.\nDefina seu propósito e inspire os outros a seguir esse caminho."
+  },
+  {
+    "id": 341,
+    "text": "Liderança não é sobre ser perfeito, mas transparente.\nA perfeição cria barreiras, a transparência aproxima.\nMostre suas falhas, aprenda e cresça com elas."
+  },
+  {
+    "id": 342,
+    "text": "Grandes líderes promovem a colaboração.\nIsolamento cria divisão.\nTrabalhe junto, compartilhe ideias e conquiste mais."
+  },
+  {
+    "id": 343,
+    "text": "Liderança exige clareza em tudo.\nA falta de clareza cria confusão.\nComunique de forma clara e objetiva para garantir o entendimento."
+  },
+  {
+    "id": 344,
+    "text": "Líderes veem além do agora.\nFocar apenas no presente impede o futuro.\nPense no impacto de longo prazo de suas decisões."
+  },
+  {
+    "id": 345,
+    "text": "Liderança é sobre inspirar ação, não sobre comandar.\nComando sem motivação gera resistência.\nInspire sua equipe a agir com paixão e propósito."
+  },
+  {
+    "id": 346,
+    "text": "Liderança é sobre criar soluções, não problemas.\nProblemas são inevitáveis, mas soluções dependem de nós.\nSeja um solucionador, não um reclamador."
+  },
+  {
+    "id": 347,
+    "text": "Liderança forte é baseada em comunicação aberta.\nO silêncio cria distância.\nFale com sua equipe de forma transparente e receptiva."
+  },
+  {
+    "id": 348,
+    "text": "Liderança é sobre transformar desafios em crescimento.\nDesafios podem desmotivar, mas também são oportunidades.\nEnfrente os obstáculos com coragem e saia mais forte."
+  },
+  {
+    "id": 349,
+    "text": "Grandes líderes abraçam a mudança.\nA resistência à mudança gera estagnação.\nAdapte-se e incentive sua equipe a fazer o mesmo."
+  },
+  {
+    "id": 350,
+    "text": "Liderança é sobre ouvir mais do que falar.\nFalar demais cria distância.\nEscute ativamente para entender, não apenas para responder."
+  },
+  {
+    "id": 351,
+    "text": "Liderança começa com a autodisciplina.\nSem disciplina, não há progresso.\nSeja disciplinado em suas ações e inspire sua equipe a seguir o mesmo caminho."
+  },
+  {
+    "id": 352,
+    "text": "Liderança é sobre ter uma visão de futuro.\nSem visão, a equipe fica perdida.\nForneça uma direção clara e motivadora para todos."
+  },
+  {
+    "id": 353,
+    "text": "Líderes sabem que a confiança é construída com o tempo.\nDesconfiança é fácil de criar e difícil de destruir.\nConstrua confiança com consistência e transparência."
+  },
+  {
+    "id": 354,
+    "text": "Liderança é sobre assumir responsabilidades.\nFugir das responsabilidades enfraquece o time.\nSeja o primeiro a se responsabilizar, especialmente nos momentos difíceis."
+  },
+  {
+    "id": 355,
+    "text": "Liderança é sobre ter coragem para fazer escolhas difíceis.\nEvitar decisões difíceis cria problemas maiores.\nSeja ousado, tome decisões que gerem resultados de longo prazo."
+  },
+  {
+    "id": 356,
+    "text": "Liderança eficaz é sobre autoconfiança.\nInsegurança cria incerteza.\nAcredite em si mesmo e inspire confiança em sua equipe."
+  },
+  {
+    "id": 357,
+    "text": "Grandes líderes incentivam a autonomia.\nMicromanagement sufoca a criatividade.\nDeixe sua equipe tomar decisões e crescer com seus erros."
+  },
+  {
+    "id": 358,
+    "text": "Liderança é sobre manter o foco no que importa.\nDistrações podem desviar seu caminho.\nMantenha sua atenção nas prioridades, não nas urgências."
+  },
+  {
+    "id": 359,
+    "text": "Liderança é sobre inspirar confiança, não medo.\nO medo cria distância.\nConstrua um ambiente de segurança e apoio."
+  },
+  {
+    "id": 360,
+    "text": "Grandes líderes abraçam o feedback como uma oportunidade.\nEvitar feedback é estagnar.\nEsteja disposto a ouvir, aprender e melhorar."
+  },
+  {
+    "id": 361,
+    "text": "Liderança é sobre gerar impacto positivo.\nLíderes que não geram impacto falham em seu propósito.\nTrabalhe todos os dias para fazer a diferença."
+  },
+  {
+    "id": 362,
+    "text": "Liderança é sobre agir com integridade.\nCompromissos quebrados destroem reputações.\nSeja honesto em todas as situações, mesmo quando difícil."
+  },
+  {
+    "id": 363,
+    "text": "Liderança é sobre transformar uma visão em realidade.\nSem ação, a visão não vale nada.\nTrabalhe para transformar suas ideias em conquistas concretas."
+  },
+  {
+    "id": 364,
+    "text": "Liderança é sobre criar uma cultura de respeito.\nRespeito é a base de qualquer relacionamento.\nCultive o respeito mútuo em sua equipe."
+  },
+  {
+    "id": 365,
+    "text": "Liderança é sobre ser resiliente diante das adversidades.\nDesistir nas dificuldades é o fim do progresso.\nMantenha-se firme e inspire sua equipe a fazer o mesmo."
+  },
+  {
+    "id": 366,
+    "text": "Líderes precisam ser adaptáveis.\nRigidez gera falhas.\nSeja flexível, ajuste-se e siga em frente."
+  },
+  {
+    "id": 367,
+    "text": "Grandes líderes reconhecem a força do coletivo.\nTrabalho individual não cria grandes resultados.\nColabore, compartilhe ideias e conquiste juntos."
+  },
+  {
+    "id": 368,
+    "text": "Liderança é sobre dar voz ao time.\nSilenciar a equipe impede o crescimento.\nDê espaço para suas ideias e valorize suas contribuições."
+  },
+  {
+    "id": 369,
+    "text": "Liderança é sobre ouvir e agir.\nIgnorar o que é dito cria desconfiança.\nEscute atentamente, tome ações baseadas nas necessidades da equipe."
+  },
+  {
+    "id": 370,
+    "text": "Liderança é sobre ter coragem para inovar.\nMedo da mudança enfraquece a inovação.\nTeste novas abordagens e encoraje sua equipe a fazer o mesmo."
+  },
+  {
+    "id": 371,
+    "text": "Liderança é sobre reconhecer o esforço, não apenas os resultados.\nIgnorar o esforço desmotiva a equipe.\nValorize as jornadas, não apenas as conquistas."
+  },
+  {
+    "id": 372,
+    "text": "Liderança verdadeira é construída com consistência e paciência.\nMudanças rápidas criam desconfiança.\nSeja consistente em suas ações para ganhar respeito."
+  },
+  {
+    "id": 373,
+    "text": "Liderança é sobre trabalhar com seu time, não para ele.\nLíderes de verdade estão lado a lado com suas equipes.\nCresça com sua equipe, não apenas à frente dela."
+  },
+  {
+    "id": 374,
+    "text": "Liderança é sobre servir, não ser servido.\nLíderes egoístas criam resistência.\nSirva aos outros e veja sua liderança florescer."
+  }
+]
