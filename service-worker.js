@@ -1,32 +1,35 @@
 /* ============================================================
    Sparks Líder – Service Worker
    Estratégia: Cache-First / Offline-First
+   Versão Atualizada: v10 (Força atualização em todos os dispositivos)
    ============================================================ */
 
-const CACHE_NAME = 'sparks-lider-v1';
+const CACHE_NAME = 'sparks-lider-v10'; // Aumentei para v10 para garantir limpeza total
 
-/* Arquivos que serão cacheados na instalação */
+/* Arquivos corrigidos para refletir a raiz do seu GitHub */
 const STATIC_ASSETS = [
-  '.',
+  './',
   './index.html',
-  './style.css',
+  './estilo.css',      // Ajustado de style.css para estilo.css (conforme seu print)
   './app.js',
-  './data/frases.json',
+  './frases.json',     // Removido o /data/ - Agora ele encontra o arquivo!
   './manifest.json',
-  './config/theme.json',
-  './config/app.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './tema.json',       // Ajustado de config/theme para tema.json (conforme seu print)
+  './app.json',        // Ajustado para a raiz
+  './ícone-192.png',   // Ajustado os nomes com acento conforme seu print
+  './ícone-512.png'
 ];
 
 /* ── Instalação: pré-cache dos arquivos estáticos ── */
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
+      // Usamos um loop para evitar que um erro em um arquivo trave todo o cache
+      return Promise.allSettled(
+        STATIC_ASSETS.map(asset => cache.add(asset))
+      );
     })
   );
-  /* Força ativação imediata sem esperar a aba fechar */
   self.skipWaiting();
 });
 
@@ -46,7 +49,6 @@ self.addEventListener('activate', (event) => {
 
 /* ── Fetch: Cache-First, fallback para rede ── */
 self.addEventListener('fetch', (event) => {
-  /* Ignora requisições que não sejam GET */
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
@@ -54,13 +56,11 @@ self.addEventListener('fetch', (event) => {
       if (cached) {
         return cached;
       }
-      /* Tenta buscar na rede e cacheia a resposta */
       return fetch(event.request)
         .then((networkResponse) => {
           if (
             networkResponse &&
-            networkResponse.status === 200 &&
-            networkResponse.type === 'basic'
+            networkResponse.status === 200
           ) {
             const clone = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
@@ -70,7 +70,6 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          /* Fallback: retorna index.html para navegação offline */
           if (event.request.destination === 'document') {
             return caches.match('./index.html');
           }
