@@ -25,9 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ─── Service Worker ─── */
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-    // Adicionado ?v= para garantir que o navegador baixe o SW novo
+    // Forçamos a atualização do SW com um timestamp
     navigator.serviceWorker.register('./service-worker.js?v=' + Date.now())
-      .then(() => console.log('[SW] Registrado com sucesso.'))
+      .then(reg => {
+        console.log('[SW] Registrado.');
+        // Se houver uma atualização, ele avisa
+        reg.onupdatefound = () => {
+          const installingWorker = reg.installing;
+          installingWorker.onstatechange = () => {
+            if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              console.log('[SW] Novo conteúdo disponível, por favor atualize.');
+            }
+          };
+        };
+      })
       .catch((err) => console.warn('[SW] Falha:', err));
   }
 }
@@ -58,24 +69,26 @@ function activatePremium(bool) {
   localStorage.setItem('sl_premium', bool ? 'true' : 'false');
 }
 
-/* ─── CARREGAR FRASES (CORRIGIDO PARA VERCEL - SEM /DATA/) ─── */
+/* ─── CARREGAR FRASES (FIX DEFINITIVO) ─── */
 async function loadFrases() {
   try {
-    // AJUSTADO: Removido o ./data/ pois seu arquivo está na raiz
-    const res = await fetch('./frases.json?v=' + Date.now());
+    // Usamos './frases.json' sem a pasta data e com um cache breaker v=Date.now()
+    const res = await fetch('./frases.json?nocache=' + Date.now(), {
+      cache: 'no-store' // Força o navegador a não usar cache nenhum
+    });
     
-    if (!res.ok) throw new Error('Arquivo frases.json não encontrado na raiz.');
+    if (!res.ok) throw new Error('Não foi possível encontrar frases.json na raiz.');
     
     const data = await res.json();
     State.frases = data;
     console.log('[Sparks] Sucesso! ' + data.length + ' frases carregadas.');
 
   } catch (err) {
-    console.error('[Sparks] Erro crítico:', err);
+    console.error('[Sparks] Erro crítico ao carregar:', err);
+    // Fallback de segurança
     State.frases = [
-      { id: 1, text: "Erro ao carregar frases.\nClique em 'Próximo Spark' para tentar novamente.\nVerifique a conexão." },
-      { id: 2, text: "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle." },
-      { id: 3, text: "Coragem abre caminhos.\nMedo fecha portas.\nDê o primeiro passo." }
+      { id: 1, text: "Erro ao conectar com o servidor.\nArraste para baixo ou reinicie o app.\nVerifique se frases.json está na raiz." },
+      { id: 2, text: "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle." }
     ];
   }
 
@@ -95,13 +108,8 @@ function showScreen(screen) {
   const welcome = $('#screen-welcome');
   const app      = $('#screen-app');
   if (!welcome || !app) return;
-  if (screen === 'welcome') {
-    welcome.style.display = 'flex';
-    app.style.display     = 'none';
-  } else {
-    welcome.style.display = 'none';
-    app.style.display     = 'flex';
-  }
+  welcome.style.display = (screen === 'welcome') ? 'flex' : 'none';
+  app.style.display     = (screen === 'welcome') ? 'none' : 'flex';
 }
 
 /* ─── Tela de Boas-vindas ─── */
@@ -218,7 +226,7 @@ function handleExport() {
   if (frase) exportToCanvas(frase, State.isPremium);
 }
 
-/* ─── EXPORTAÇÃO CORRIGIDA (WRAP TEXT / SEM CORTES) ─── */
+/* ─── EXPORTAÇÃO COM WRAP TEXT (CORREÇÃO DE CORTE) ─── */
 function exportToCanvas(frase, premium) {
   const W = 1080; const H = 1080;
   const canvas = document.createElement('canvas');
@@ -230,12 +238,11 @@ function exportToCanvas(frase, premium) {
 
   const grad = ctx.createLinearGradient(0, 0, W, 0);
   grad.addColorStop(0, '#1565C0'); grad.addColorStop(1, '#42A5F5');
-  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 20);
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 25);
 
-  ctx.font = 'bold 40px sans-serif'; ctx.fillStyle = '#1565C0';
-  ctx.textAlign = 'left'; ctx.fillText('Sparks Líder', 60, 100);
+  ctx.font = 'bold 42px sans-serif'; ctx.fillStyle = '#1565C0';
+  ctx.textAlign = 'left'; ctx.fillText('Sparks Líder', 70, 110);
 
-  // FUNÇÃO DE QUEBRA DE LINHA MELHORADA
   function wrapText(context, text, x, y, maxWidth, lineHeight) {
     const words = text.split(' ');
     let line = '';
@@ -251,31 +258,31 @@ function exportToCanvas(frase, premium) {
       }
     }
     context.fillText(line, x, y);
-    return y; 
+    return y;
   }
 
   const lines = frase.text.split('\n').filter(Boolean);
   let currentY = 400;
-  const maxWidth = 900; 
+  const maxWidth = 880; 
 
   ctx.textAlign = 'center';
-
   lines.forEach((txt, i) => {
     if (i === 0) {
-      ctx.font = 'bold 65px sans-serif'; ctx.fillStyle = '#0D47A1';
-      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 85) + 120;
+      ctx.font = 'bold 68px sans-serif'; ctx.fillStyle = '#0D47A1';
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 90) + 130;
     } else {
-      ctx.font = '50px sans-serif'; ctx.fillStyle = '#4A5568';
-      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 75) + 100;
+      ctx.font = '52px sans-serif'; ctx.fillStyle = '#4A5568';
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 75) + 110;
     }
   });
 
+  ctx.textAlign = 'center';
   if (premium) {
-    ctx.fillStyle = '#C9963A'; ctx.font = 'bold 48px sans-serif';
-    ctx.fillText(State.username || 'Líder', W / 2, H - 100);
+    ctx.fillStyle = '#C9963A'; ctx.font = 'bold 50px sans-serif';
+    ctx.fillText(State.username || 'Líder', W / 2, H - 110);
   } else {
-    ctx.fillStyle = '#CBD5E0'; ctx.font = '30px sans-serif';
-    ctx.fillText('Gerado no Sparks Líder', W / 2, H - 80);
+    ctx.fillStyle = '#CBD5E0'; ctx.font = '32px sans-serif';
+    ctx.fillText('Gerado no Sparks Líder', W / 2, H - 90);
   }
 
   const link = document.createElement('a');
