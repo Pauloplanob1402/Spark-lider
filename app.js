@@ -57,26 +57,22 @@ function activatePremium(bool) {
   localStorage.setItem('sl_premium', bool ? 'true' : 'false');
 }
 
-/* ─── CARREGAR FRASES (CORRIGIDO PARA EVITAR AS 3 FRASES DE TESTE) ─── */
+/* ─── CARREGAR FRASES (CORRIGIDO PARA VERCEL E ARQUIVO NA RAIZ) ─── */
 async function loadFrases() {
   try {
-    // ADICIONADO: ?v= + Date.now() para forçar o GitHub/Vercel a entregar o arquivo novo
-    const res = await fetch('./data/frases.json?v=' + Date.now());
+    // REMOVIDO O /data/ pois o arquivo está solto na raiz
+    const res = await fetch('./frases.json?v=' + Date.now());
     
-    if (!res.ok) throw new Error('Arquivo frases.json não encontrado no servidor.');
+    if (!res.ok) throw new Error('Arquivo frases.json não encontrado.');
     
     const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) throw new Error('JSON vazio ou inválido.');
-    
     State.frases = data;
-    console.log('[Sparks] Sucesso! ' + data.length + ' frases carregadas.');
+    console.log('[Sparks] Sucesso! ' + data.length + ' frases carregadas da raiz.');
 
   } catch (err) {
-    console.error('[Sparks] Erro crítico ao carregar frases.json:', err);
-    
-    /* Fallback (Só aparece se o arquivo real falhar) */
+    console.error('[Sparks] Erro crítico:', err);
     State.frases = [
-      { id: 1, text: "Erro ao carregar frases.\nVerifique a pasta /data/ no GitHub.\nArraste para atualizar." },
+      { id: 1, text: "Erro ao carregar frases.\nVerifique se o arquivo está na raiz do GitHub.\nToque para tentar novamente." },
       { id: 2, text: "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle." },
       { id: 3, text: "Coragem abre caminhos.\nMedo fecha portas.\nDê o primeiro passo." }
     ];
@@ -122,12 +118,7 @@ function setupWelcomeScreen() {
 
   function handleStart() {
     const name = input.value.trim();
-    if (!name) {
-      input.focus();
-      input.style.borderColor = '#E53E3E';
-      setTimeout(() => { input.style.borderColor = ''; }, 1200);
-      return;
-    }
+    if (!name) return;
     saveUsername(name);
     showScreen('app');
     setupAppScreen();
@@ -137,34 +128,22 @@ function setupWelcomeScreen() {
 
 /* ─── Tela Principal ─── */
 let appScreenReady = false;
-
 function setupAppScreen() {
   updateGreeting();
   if (appScreenReady) return;
   appScreenReady = true;
 
-  const btnNext = $('#btn-next');
-  const btnFav = $('#btn-fav');
-  const btnShare = $('#btn-share');
-  const btnExport = $('#btn-export');
-
-  if(btnNext) btnNext.addEventListener('click', showRandomFrase);
-  if(btnFav) btnFav.addEventListener('click', toggleFavorite);
-  if(btnShare) btnShare.addEventListener('click', handleShare);
-  if(btnExport) btnExport.addEventListener('click', handleExport);
+  $('#btn-next')?.addEventListener('click', showRandomFrase);
+  $('#btn-fav')?.addEventListener('click', toggleFavorite);
+  $('#btn-share')?.addEventListener('click', handleShare);
+  $('#btn-export')?.addEventListener('click', handleExport);
 
   $('#nav-home')?.addEventListener('click', () => switchView('home'));
   $('#nav-favs')?.addEventListener('click', () => switchView('favorites'));
   $('#nav-premium')?.addEventListener('click', openPremiumModal);
-
   $('#modal-close')?.addEventListener('click', closePremiumModal);
   $('#btn-buy')?.addEventListener('click', handleBuyPremium);
   $('#btn-demo-premium')?.addEventListener('click', handleDemoPremium);
-  $('#modal-overlay')?.addEventListener('click', (e) => {
-    if (e.target === $('#modal-overlay')) closePremiumModal();
-  });
-
-  $('#btn-banner-premium')?.addEventListener('click', openPremiumModal);
 
   updatePremiumUI();
 }
@@ -176,39 +155,26 @@ function updateGreeting() {
 
 function showRandomFrase() {
   if (!State.frases.length) return;
-
   let available = State.frases.filter(f => !State.history.includes(f.id));
-
   if (available.length === 0) {
     State.history = [];
     available = State.frases.slice();
-    saveHistory();
   }
-
-  const pool = available.length > 1
-    ? available.filter(f => f.id !== State.currentId)
-    : available;
-
+  const pool = available.length > 1 ? available.filter(f => f.id !== State.currentId) : available;
   const frase = pool[Math.floor(Math.random() * pool.length)];
-
   State.currentId = frase.id;
   State.history.push(frase.id);
   saveHistory();
-
   renderFrase(frase);
   updateFavButton();
 }
 
 function renderFrase(frase) {
-  const raw   = frase.text || '';
-  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+  const lines = (frase.text || '').split('\n').filter(Boolean);
   const sparkEl = $('#spark-text');
-  if (!sparkEl) return;
-
-  sparkEl.innerHTML = lines
-    .map((line, i) => `<p class="line line-${i + 1}">${escapeHtml(line)}</p>`)
-    .join('');
-
+  if (sparkEl) {
+    sparkEl.innerHTML = lines.map((l, i) => `<p class="line line-${i+1}">${escapeHtml(l)}</p>`).join('');
+  }
   const idEl = $('#spark-id');
   if (idEl) idEl.textContent = `#${String(frase.id).padStart(3, '0')} de ${State.frases.length}`;
 }
@@ -218,14 +184,13 @@ function toggleFavorite() {
   const idx = State.favorites.indexOf(State.currentId);
   if (idx === -1) {
     State.favorites.push(State.currentId);
-    showToast('⭐ Adicionado aos favoritos');
+    showToast('⭐ Adicionado');
   } else {
     State.favorites.splice(idx, 1);
-    showToast('Removido dos favoritos');
+    showToast('Removido');
   }
   saveFavorites();
   updateFavButton();
-  if (State.view === 'favorites') renderFavoritesList();
 }
 
 function updateFavButton() {
@@ -233,115 +198,110 @@ function updateFavButton() {
   if (!btn) return;
   const isFav = State.favorites.includes(State.currentId);
   btn.classList.toggle('active', isFav);
-  const svg = btn.querySelector('svg');
-  if (svg) svg.style.fill = isFav ? 'var(--fav-active)' : 'none';
 }
 
 async function handleShare() {
   if (State.currentId === null) return;
   const frase = State.frases.find(f => f.id === State.currentId);
-  if (!frase) return;
-  const text = `✨ Spark do dia:\n\n${frase.text}\n\n— Sparks Líder`;
+  const text = `${frase.text}\n\n— Sparks Líder`;
   if (navigator.share) {
-    try { await navigator.share({ title: 'Sparks Líder', text }); } catch (_) {}
+    try { await navigator.share({ title: 'Sparks', text }); } catch(e){}
   } else {
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast('📋 Copiado para a área de transferência');
-    } catch (_) { showToast('Não suportado'); }
+    navigator.clipboard.writeText(text);
+    showToast('📋 Copiado');
   }
 }
 
 function handleExport() {
-  if (State.currentId === null) return;
   const frase = State.frases.find(f => f.id === State.currentId);
   if (frase) exportToCanvas(frase, State.isPremium);
 }
 
+/* ─── EXPORTAÇÃO CORRIGIDA (WRAP TEXT / SEM CORTES) ─── */
 function exportToCanvas(frase, premium) {
   const W = 1080; const H = 1080;
   const canvas = document.createElement('canvas');
   canvas.width = W; canvas.height = H;
   const ctx = canvas.getContext('2d');
+
+  // Fundo
   ctx.fillStyle = '#FFFFFF';
   ctx.fillRect(0, 0, W, H);
+
+  // Barra Topo
   const grad = ctx.createLinearGradient(0, 0, W, 0);
   grad.addColorStop(0, '#1565C0'); grad.addColorStop(1, '#42A5F5');
-  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 10);
-  ctx.font = 'bold 36px sans-serif'; ctx.fillStyle = '#1565C0';
-  ctx.textAlign = 'left'; ctx.fillText('Sparks Líder', 80, 90);
-  const lines = frase.text.split('\n').map(l => l.trim()).filter(Boolean);
-  let y = 390;
-  lines.forEach((line, i) => {
-    ctx.font = i === 0 ? 'bold 64px sans-serif' : '54px sans-serif';
-    ctx.fillStyle = i === 0 ? '#0D47A1' : '#4A5568';
-    ctx.textAlign = 'center';
-    ctx.fillText(line, W / 2, y);
-    y += 120;
-  });
-  if (premium) {
-    ctx.fillStyle = '#C9963A'; ctx.font = 'bold 44px sans-serif';
-    ctx.fillText(State.username || 'Líder', W / 2, H - 80);
-  } else {
-    ctx.fillStyle = '#CBD5E0'; ctx.font = '26px sans-serif';
-    ctx.fillText('Gerado no Sparks Líder', W / 2, H - 60);
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 20);
+
+  // Logo superior
+  ctx.font = 'bold 40px sans-serif'; ctx.fillStyle = '#1565C0';
+  ctx.textAlign = 'left'; ctx.fillText('Sparks Líder', 60, 100);
+
+  // Função interna para desenhar texto com quebra de linha
+  function wrapText(context, text, x, y, maxWidth, lineHeight) {
+    const words = text.split(' ');
+    let line = '';
+    for (let n = 0; n < words.length; n++) {
+      let testLine = line + words[n] + ' ';
+      let metrics = context.measureText(testLine);
+      if (metrics.width > maxWidth && n > 0) {
+        context.fillText(line, x, y);
+        line = words[n] + ' ';
+        y += lineHeight;
+      } else {
+        line = testLine;
+      }
+    }
+    context.fillText(line, x, y);
+    return y; // Retorna a última posição Y usada
   }
+
+  const lines = frase.text.split('\n').filter(Boolean);
+  let currentY = 400;
+  const maxWidth = 900; // Margem de segurança
+
+  ctx.textAlign = 'center';
+
+  lines.forEach((txt, i) => {
+    if (i === 0) {
+      ctx.font = 'bold 65px sans-serif'; ctx.fillStyle = '#0D47A1';
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 80) + 120;
+    } else {
+      ctx.font = '50px sans-serif'; ctx.fillStyle = '#4A5568';
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 70) + 100;
+    }
+  });
+
+  // Assinatura Rodapé
+  if (premium) {
+    ctx.fillStyle = '#C9963A'; ctx.font = 'bold 48px sans-serif';
+    ctx.fillText(State.username || 'Líder', W / 2, H - 100);
+  } else {
+    ctx.fillStyle = '#CBD5E0'; ctx.font = '30px sans-serif';
+    ctx.fillText('Gerado no Sparks Líder', W / 2, H - 80);
+  }
+
   const link = document.createElement('a');
   link.download = `spark-${frase.id}.png`;
-  link.href = canvas.toDataURL(); link.click();
+  link.href = canvas.toDataURL('image/png');
+  link.click();
 }
 
 function switchView(view) {
   State.view = view;
-  const home = $('#home-section');
-  const favs = $('#favorites-section');
-  if (view === 'home') {
-    home.style.display = 'contents';
-    favs.classList.remove('visible');
-  } else {
-    home.style.display = 'none';
-    favs.classList.add('visible');
-    renderFavoritesList();
-  }
-}
-
-function renderFavoritesList() {
-  const list = $('#favorites-list');
-  if (!list) return;
-  if (!State.favorites.length) {
-    list.innerHTML = '<p>Nenhum favorito.</p>';
-    return;
-  }
-  list.innerHTML = State.favorites.map(id => {
-    const f = State.frases.find(x => x.id === id);
-    return f ? `<div class="fav-card"><p>${f.text.replace(/\n/g, '<br>')}</p></div>` : '';
-  }).join('');
+  $('#home-section').style.display = (view === 'home') ? 'contents' : 'none';
+  $('#favorites-section').classList.toggle('visible', view !== 'home');
 }
 
 function openPremiumModal() { $('#modal-overlay').classList.add('open'); }
 function closePremiumModal() { $('#modal-overlay').classList.remove('open'); }
-
-function handleBuyPremium() {
-  activatePremium(true);
-  updatePremiumUI();
-  closePremiumModal();
-  showToast('🎉 Premium ativado!');
-}
-
-function handleDemoPremium() {
-  const status = !State.isPremium;
-  activatePremium(status);
-  updatePremiumUI();
-  closePremiumModal();
-  showToast(status ? '⚡ Modo Premium' : 'Modo Free');
-}
+function handleBuyPremium() { activatePremium(true); updatePremiumUI(); closePremiumModal(); }
+function handleDemoPremium() { activatePremium(!State.isPremium); updatePremiumUI(); closePremiumModal(); }
 
 function updatePremiumUI() {
   const isP = State.isPremium;
   if ($('#ads-container')) $('#ads-container').style.display = isP ? 'none' : 'flex';
   if ($('#premium-banner')) $('#premium-banner').style.display = isP ? 'none' : 'flex';
-  const label = $('#nav-premium-label');
-  if (label) label.textContent = isP ? '★ Pro' : 'Premium';
 }
 
 function showToast(msg) {
@@ -355,5 +315,3 @@ function showToast(msg) {
 function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
-
-function svgTrash() { return `[SVG-TRASH]`; }
