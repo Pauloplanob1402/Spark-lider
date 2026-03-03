@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ─── Service Worker ─── */
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js')
+    // Adicionado ?v= para garantir que o navegador baixe o SW novo
+    navigator.serviceWorker.register('./service-worker.js?v=' + Date.now())
       .then(() => console.log('[SW] Registrado com sucesso.'))
       .catch((err) => console.warn('[SW] Falha:', err));
   }
@@ -57,22 +58,22 @@ function activatePremium(bool) {
   localStorage.setItem('sl_premium', bool ? 'true' : 'false');
 }
 
-/* ─── CARREGAR FRASES (CORRIGIDO PARA VERCEL E ARQUIVO NA RAIZ) ─── */
+/* ─── CARREGAR FRASES (CORRIGIDO PARA VERCEL - SEM /DATA/) ─── */
 async function loadFrases() {
   try {
-    // REMOVIDO O /data/ pois o arquivo está solto na raiz
+    // AJUSTADO: Removido o ./data/ pois seu arquivo está na raiz
     const res = await fetch('./frases.json?v=' + Date.now());
     
-    if (!res.ok) throw new Error('Arquivo frases.json não encontrado.');
+    if (!res.ok) throw new Error('Arquivo frases.json não encontrado na raiz.');
     
     const data = await res.json();
     State.frases = data;
-    console.log('[Sparks] Sucesso! ' + data.length + ' frases carregadas da raiz.');
+    console.log('[Sparks] Sucesso! ' + data.length + ' frases carregadas.');
 
   } catch (err) {
     console.error('[Sparks] Erro crítico:', err);
     State.frases = [
-      { id: 1, text: "Erro ao carregar frases.\nVerifique se o arquivo está na raiz do GitHub.\nToque para tentar novamente." },
+      { id: 1, text: "Erro ao carregar frases.\nClique em 'Próximo Spark' para tentar novamente.\nVerifique a conexão." },
       { id: 2, text: "Responsabilidade liberta.\nCulpa aprisiona.\nAssuma o controle." },
       { id: 3, text: "Coragem abre caminhos.\nMedo fecha portas.\nDê o primeiro passo." }
     ];
@@ -224,20 +225,17 @@ function exportToCanvas(frase, premium) {
   canvas.width = W; canvas.height = H;
   const ctx = canvas.getContext('2d');
 
-  // Fundo
   ctx.fillStyle = '#FFFFFF';
   ctx.fillRect(0, 0, W, H);
 
-  // Barra Topo
   const grad = ctx.createLinearGradient(0, 0, W, 0);
   grad.addColorStop(0, '#1565C0'); grad.addColorStop(1, '#42A5F5');
   ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 20);
 
-  // Logo superior
   ctx.font = 'bold 40px sans-serif'; ctx.fillStyle = '#1565C0';
   ctx.textAlign = 'left'; ctx.fillText('Sparks Líder', 60, 100);
 
-  // Função interna para desenhar texto com quebra de linha
+  // FUNÇÃO DE QUEBRA DE LINHA MELHORADA
   function wrapText(context, text, x, y, maxWidth, lineHeight) {
     const words = text.split(' ');
     let line = '';
@@ -253,26 +251,25 @@ function exportToCanvas(frase, premium) {
       }
     }
     context.fillText(line, x, y);
-    return y; // Retorna a última posição Y usada
+    return y; 
   }
 
   const lines = frase.text.split('\n').filter(Boolean);
   let currentY = 400;
-  const maxWidth = 900; // Margem de segurança
+  const maxWidth = 900; 
 
   ctx.textAlign = 'center';
 
   lines.forEach((txt, i) => {
     if (i === 0) {
       ctx.font = 'bold 65px sans-serif'; ctx.fillStyle = '#0D47A1';
-      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 80) + 120;
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 85) + 120;
     } else {
       ctx.font = '50px sans-serif'; ctx.fillStyle = '#4A5568';
-      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 70) + 100;
+      currentY = wrapText(ctx, txt, W/2, currentY, maxWidth, 75) + 100;
     }
   });
 
-  // Assinatura Rodapé
   if (premium) {
     ctx.fillStyle = '#C9963A'; ctx.font = 'bold 48px sans-serif';
     ctx.fillText(State.username || 'Líder', W / 2, H - 100);
@@ -301,7 +298,6 @@ function handleDemoPremium() { activatePremium(!State.isPremium); updatePremiumU
 function updatePremiumUI() {
   const isP = State.isPremium;
   if ($('#ads-container')) $('#ads-container').style.display = isP ? 'none' : 'flex';
-  if ($('#premium-banner')) $('#premium-banner').style.display = isP ? 'none' : 'flex';
 }
 
 function showToast(msg) {
