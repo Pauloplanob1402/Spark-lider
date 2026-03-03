@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sparklider.alpha",
+      "sha256_cert_fingerprints": [
+        "C3:1A:99:48:00:09:94:73:76:C4:07:2D:38:E9:40:B4:8C:92:19:C9:5C:6A:B3:1C:18:7D:84:FB:1F:EF:87:66"
+      ]
+    }
+  }
+]

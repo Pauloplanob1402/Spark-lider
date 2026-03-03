@@ -1,0 +1,8 @@
+# Configuração Netlify – Sparks Líder
+# Necessário para o Android reconhecer o app e esconder a barra de URL
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"

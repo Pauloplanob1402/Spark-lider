@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1565C0" />
+  <meta name="description" content="Frases de liderança em 3 linhas. Clareza, foco e propósito para líderes." />
+
+  <!-- PWA Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Sparks Líder" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-6266100736640555"
+     crossorigin="anonymous"></script>
+
+  <title>Sparks Líder – Frases de Liderança</title>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       TELA 1: BOAS-VINDAS (Onboarding)
+       Exibida apenas na primeira vez
+       ════════════════════════════════════════ -->
+  <div id="screen-welcome" style="display:none;">
+    <!-- Logo -->
+    <div class="welcome-logo">
+      <!-- SPKS Logo: texto branco limpo, sem fundo -->
+      <img src="icons/spks-welcome.png" alt="SPKS" class="welcome-logo-img" />
+
+      <h1 class="welcome-title">Sparks Líder</h1>
+      <p class="welcome-subtitle">Clareza para quem lidera.</p>
+    </div>
+
+    <!-- Card de input -->
+    <div class="welcome-card">
+      <label for="welcome-input">Como você quer ser chamado?</label>
+      <input
+        type="text"
+        id="welcome-input"
+        class="welcome-input"
+        placeholder="Seu nome ou apelido..."
+        maxlength="30"
+        autocomplete="name"
+        spellcheck="false"
+      />
+      <button id="btn-start" class="btn-start">Começar →</button>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       TELA 2: APP PRINCIPAL
+       ════════════════════════════════════════ -->
+  <div id="screen-app" style="display:none;">
+    <div id="app">
+
+      <!-- ── Cabeçalho ── -->
+      <header class="app-header">
+        <div class="app-logo">
+          <span class="app-logo-text">SPKS</span>
+        </div>
+      </header>
+
+      <!-- ── Saudação ── -->
+      <div class="greeting">
+        <p class="greeting-text">Seu spark do dia</p>
+        <p class="greeting-name" id="greeting-name">Bom foco.</p>
+      </div>
+
+      <!-- ══════════════════════════════
+           VIEW: HOME
+           ══════════════════════════════ -->
+      <div id="home-section" style="display:contents;">
+
+        <!-- ── Card da Frase ── -->
+        <div class="card">
+          <!-- Número da frase -->
+          <p class="spark-id" id="spark-id">#001 de 374</p>
+
+          <!-- Texto da frase (renderizado pelo JS) -->
+          <div id="spark-text" class="spark-text" aria-live="polite" aria-label="Frase de liderança">
+            <span class="line">Carregando spark...</span>
+          </div>
+
+          <!-- Ações do card -->
+          <div class="card-actions">
+            <!-- Favoritar -->
+            <button id="btn-fav" class="btn btn-fav" title="Favoritar" aria-label="Favoritar esta frase">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77
+                                 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Salvar
+            </button>
+
+            <!-- Compartilhar -->
+            <button id="btn-share" class="btn btn-share" title="Compartilhar" aria-label="Compartilhar frase">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+              </svg>
+              Compartilhar
+            </button>
+
+            <!-- Exportar -->
+            <button id="btn-export" class="btn btn-export" title="Exportar como imagem" aria-label="Exportar como imagem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              Imagem
+            </button>
+          </div>
+
+          <!-- Botão principal -->
+          <button id="btn-next" class="btn btn-primary" aria-label="Ver próxima frase">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
+            </svg>
+            Próximo Spark
+          </button>
+        </div>
+
+        <!-- ── Espaço de Anúncios ── -->
+        <div id="ads-container" class="ads-container">
+          <span class="ads-label">Publicidade</span>
+          <div class="ads-placeholder">
+            <!-- AdMob Banner Integration -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-app-pub-6266100736640555"
+                 data-ad-slot="7341549641"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+          </div>
+        </div>
+
+        <!-- ── Banner de upgrade Premium ── -->
+        <div id="premium-banner" class="premium-banner">
+          <div class="premium-banner-text">
+            <p class="premium-banner-title">✨ Sparks Premium</p>
+            <p class="premium-banner-desc">Seu nome em dourado em cada imagem compartilhada. Sem anúncios.</p>
+          </div>
+          <button id="btn-banner-premium" class="btn-premium">Ver plano</button>
+        </div>
+
+      </div><!-- /home-section -->
+
+
+      <!-- ══════════════════════════════
+           VIEW: FAVORITOS
+           ══════════════════════════════ -->
+      <div id="favorites-section" class="favorites-section">
+        <div class="favorites-header">
+          <h2 class="favorites-title">⭐ Meus Favoritos</h2>
+          <span class="favorites-count" id="favorites-count">0 sparks</span>
+        </div>
+        <div id="favorites-list" class="favorites-list">
+          <!-- Populado pelo JS -->
+        </div>
+      </div>
+
+
+      <!-- ── Navegação inferior ── -->
+      <nav class="bottom-nav" role="navigation" aria-label="Navegação principal">
+        <button id="nav-home" class="nav-btn active" aria-label="Início" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Início</span>
+        </button>
+
+        <button id="nav-favs" class="nav-btn" aria-label="Favoritos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77
+                             5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span>Favoritos</span>
+        </button>
+
+        <button id="nav-premium" class="nav-btn" aria-label="Premium">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <span id="nav-premium-label">Premium</span>
+        </button>
+      </nav>
+
+    </div><!-- /app -->
+  </div><!-- /screen-app -->
+
+
+  <!-- ════════════════════════════════════════
+       MODAL PREMIUM
+       ════════════════════════════════════════ -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal modal-inner">
+
+      <!-- Fechar -->
+      <button id="modal-close" class="modal-close" aria-label="Fechar modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" width="16" height="16">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <p class="premium-icon">⭐</p>
+      <h2 class="premium-title" id="modal-title">Sparks Premium</h2>
+
+      <p class="premium-price">Acesso completo por apenas<br>
+        <strong>R$ 14,90</strong> / único pagamento
+      </p>
+
+      <!-- Benefícios -->
+      <div class="premium-features">
+        <div class="premium-feature">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          Sem anúncios para sempre
+        </div>
+        <div class="premium-feature">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <span>Imagens com <strong>seu nome</strong> no rodapé — em dourado</span>
+        </div>
+        <div class="premium-feature">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          Sua identidade em cada spark compartilhado
+        </div>
+        <div class="premium-feature">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          Acesso a temas visuais futuros
+        </div>
+      </div>
+
+      <!-- Botão de compra (integrar com Play Billing) -->
+      <button id="btn-buy" class="btn-buy">
+        ⚡ Ativar Premium — R$ 14,90
+      </button>
+
+      <!-- Demo toggle -->
+      <button id="btn-demo-premium" class="btn-demo-premium">
+        Ativar Premium (modo demo)
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- ── Toast de notificação ── -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+
+  <!-- ── JavaScript principal ── -->
+  <script src="app.js"></script>
+
+</body>
+</html>
