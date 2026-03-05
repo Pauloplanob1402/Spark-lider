@@ -287,51 +287,27 @@ function handleExport() {
 }
 
 function exportToCanvas(frase, premium) {
-  const W = 1080;
-  const H = 1080;
+  const W      = 1080;
+  const H      = 1080;
+  const MARGIN = 120;           /* margem lateral segura — afasta o texto das bordas */
+  const MAX_W  = W - MARGIN * 2; /* 840px utilizáveis */
+  /* Usa Arial que SEMPRE está disponível no Canvas — evita erro de measureText com fonte não carregada */
+  const FONT   = 'Arial, sans-serif';
+
   const canvas = document.createElement('canvas');
   canvas.width  = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d');
 
-  /* ── Fundo branco ── */
-  ctx.fillStyle = '#FFFFFF';
-  ctx.fillRect(0, 0, W, H);
-
-  /* ── Borda colorida topo ── */
-  const grad = ctx.createLinearGradient(0, 0, W, 0);
-  grad.addColorStop(0, '#1565C0');
-  grad.addColorStop(1, '#42A5F5');
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, W, 10);
-
-  /* ── Logo texto ── */
-  ctx.font = 'bold 36px Segoe UI, system-ui, sans-serif';
-  ctx.fillStyle = '#1565C0';
-  ctx.textAlign = 'left';
-  ctx.fillText('Sparks Líder', 80, 90);
-
-  /* ── Linhas da frase ── */
-  const lines = frase.text.split('\n').map(l => l.trim()).filter(Boolean);
-  const lineStyles = [
-    { size: 64, weight: 'bold',   color: '#0D47A1' },
-    { size: 54, weight: 'normal', color: '#4A5568' },
-    { size: 58, weight: '600',    color: '#1A1A2E' },
-  ];
-
-  let y = 390;
-  const lineH    = 110;
-  const MARGIN   = 100;                  /* margem lateral segura em px */
-  const MAX_W    = W - MARGIN * 2;       /* largura máxima do texto: 880px */
-
-  /* Helper: quebra uma string em sub-linhas respeitando MAX_W */
-  function wrapText(ctx, text, maxWidth) {
+  /* ── Helper: quebra texto em linhas respeitando MAX_W ── */
+  function wrapText(text, fontSize, weight) {
+    ctx.font = `${weight} ${fontSize}px ${FONT}`;
     const words = text.split(' ');
     const rows  = [];
     let current = '';
     for (const word of words) {
       const candidate = current ? `${current} ${word}` : word;
-      if (ctx.measureText(candidate).width > maxWidth && current) {
+      if (ctx.measureText(candidate).width > MAX_W && current) {
         rows.push(current);
         current = word;
       } else {
@@ -342,55 +318,99 @@ function exportToCanvas(frase, premium) {
     return rows;
   }
 
-  lines.forEach((line, i) => {
-    const style = lineStyles[i] || lineStyles[2];
-    ctx.font      = `${style.weight} ${style.size}px Segoe UI, system-ui, sans-serif`;
-    ctx.fillStyle = style.color;
-    ctx.textAlign = 'center';
+  /* ── Fundo branco ── */
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillRect(0, 0, W, H);
 
-    const rows = wrapText(ctx, line, MAX_W);
-    for (const row of rows) {
-      ctx.fillText(row, W / 2, y);
-      y += style.size * 1.3;
-    }
-    y += lineH - style.size * 1.3; /* espaço extra entre frases */
-  });
+  /* ── Borda gradiente topo ── */
+  const grad = ctx.createLinearGradient(0, 0, W, 0);
+  grad.addColorStop(0, '#1565C0');
+  grad.addColorStop(1, '#42A5F5');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, W, 12);
 
-  /* ── Linha decorativa ── */
+  /* ── Logo ── */
+  ctx.font      = `bold 34px ${FONT}`;
+  ctx.fillStyle = '#1565C0';
+  ctx.textAlign = 'left';
+  ctx.fillText('Sparks Líder', MARGIN, 88);
+
+  /* ── Linha divisória ── */
   ctx.strokeStyle = '#E2E8F0';
   ctx.lineWidth   = 2;
   ctx.beginPath();
-  ctx.moveTo(80, 150);
-  ctx.lineTo(W - 80, 150);
+  ctx.moveTo(MARGIN, 112);
+  ctx.lineTo(W - MARGIN, 112);
   ctx.stroke();
+
+  /* ── Calcular todas as linhas primeiro para centralizar verticalmente ── */
+  const rawLines  = frase.text.split('\n').map(l => l.trim()).filter(Boolean);
+  const lineStyles = [
+    { size: 62, weight: 'bold',   color: '#0D47A1', gap: 36 },
+    { size: 50, weight: '400',    color: '#4A5568', gap: 32 },
+    { size: 54, weight: '700',    color: '#1A1A2E', gap: 0  },
+  ];
+
+  /* Monta array com todas as sub-linhas para calcular altura total */
+  const allRows = [];
+  rawLines.forEach((line, i) => {
+    const st   = lineStyles[i] || lineStyles[2];
+    const rows = wrapText(line, st.size, st.weight);
+    rows.forEach((row, ri) => {
+      allRows.push({ text: row, style: st, isLast: ri === rows.length - 1 });
+    });
+  });
+
+  /* Altura total do bloco de texto */
+  const totalH = allRows.reduce((acc, r, idx) => {
+    const lineH = r.style.size * 1.35;
+    const gap   = (r.isLast && idx < allRows.length - 1) ? r.style.gap : 0;
+    return acc + lineH + gap;
+  }, 0);
+
+  /* Área disponível entre linha divisória e rodapé */
+  const areaTop = 160;
+  const areaBot = H - 180;
+  const areaH   = areaBot - areaTop;
+  let y = areaTop + (areaH - totalH) / 2 + lineStyles[0].size; /* centralizado */
+  if (y < areaTop + 60) y = areaTop + 60; /* mínimo de segurança */
+
+  /* ── Renderizar linhas ── */
+  allRows.forEach((r, idx) => {
+    ctx.font      = `${r.style.weight} ${r.style.size}px ${FONT}`;
+    ctx.fillStyle = r.style.color;
+    ctx.textAlign = 'center';
+    ctx.fillText(r.text, W / 2, y);
+    const lineH = r.style.size * 1.35;
+    const gap   = (r.isLast && idx < allRows.length - 1) ? r.style.gap : 0;
+    y += lineH + gap;
+  });
 
   /* ── Rodapé ── */
   if (premium) {
-    /* Premium: assinatura com nome do usuário, dourada e elegante */
     const name = State.username || 'Líder';
 
-    /* Linha divisória dourada */
+    /* Linha dourada */
     ctx.strokeStyle = '#E8D5A3';
     ctx.lineWidth   = 1.5;
     ctx.beginPath();
-    ctx.moveTo(W / 2 - 120, H - 130);
-    ctx.lineTo(W / 2 + 120, H - 130);
+    ctx.moveTo(W / 2 - 140, H - 138);
+    ctx.lineTo(W / 2 + 140, H - 138);
     ctx.stroke();
 
-    /* Label pequeno */
-    ctx.font      = '26px Segoe UI, system-ui, sans-serif';
+    /* Label */
+    ctx.font      = `400 24px ${FONT}`;
     ctx.fillStyle = '#B0BEC5';
     ctx.textAlign = 'center';
-    ctx.fillText('compartilhado por', W / 2, H - 92);
+    ctx.fillText('compartilhado por', W / 2, H - 98);
 
-    /* Nome em dourado */
-    ctx.font      = 'bold 44px Segoe UI, system-ui, sans-serif';
+    /* Nome dourado */
+    ctx.font      = `bold 46px ${FONT}`;
     ctx.fillStyle = '#C9963A';
-    ctx.fillText(name, W / 2, H - 44);
+    ctx.fillText(name, W / 2, H - 46);
 
   } else {
-    /* Free: marca d'água genérica */
-    ctx.font      = '26px Segoe UI, system-ui, sans-serif';
+    ctx.font      = `400 24px ${FONT}`;
     ctx.fillStyle = '#CBD5E0';
     ctx.textAlign = 'center';
     ctx.fillText('Gerado no Sparks Líder', W / 2, H - 60);
