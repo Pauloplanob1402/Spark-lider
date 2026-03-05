@@ -1,27 +1,46 @@
-# Sparks Líder — Como sumir com a barra de URL no TWA
+# Sparks Líder — Guia completo
 
-A barra de URL aparece no TWA quando o `assetlinks.json` não está
-configurado corretamente com o SHA-256 do seu keystore.
+## 1. Deploy na Vercel
+1. Suba todos os arquivos da raiz no GitHub
+2. Importe o repositório na Vercel (Framework = Other)
+3. O `vercel.json` já configura todos os headers necessários
 
-## Passos
+## 2. Gerar o AAB para a Play Store
 
-1. Gere o keystore no Bubblewrap:
-   ```bash
-   bubblewrap init --manifest https://SEU-DOMINIO.vercel.app/manifest.json
-   ```
+### Pré-requisitos
+- Java instalado (Android Studio inclui o Java em `C:\Program Files\Android\Android Studio\jbr`)
 
-2. Pegue o SHA-256:
-   ```bash
-   keytool -list -v -keystore android.keystore -alias android
-   ```
+### Preencher senha do keystore
+Abra `android/gradle.properties` e substitua:
+- `STORE_PASSWORD` → sua senha do arquivo android.keystore
+- `KEY_PASSWORD` → mesma senha (geralmente igual)
 
-3. Edite o arquivo `.well-known/assetlinks.json`:
-   - Substitua `SEU.PACKAGE.NAME` pelo package name escolhido (ex: `com.sparklider.alpha`)
-   - Substitua `COLE_AQUI_O_SHA256` pelo SHA-256 do passo 2
+### Comandos no PowerShell
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+$env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
+cd C:\Users\Usuario\Documents\sparks-lider-app
+.\gradlew bundleRelease
+```
 
-4. Faça commit e deploy na Vercel
+### Arquivo gerado
+`app\build\outputs\bundle\release\app-release-bundle.aab`
 
-5. Teste: https://SEU-DOMINIO.vercel.app/.well-known/assetlinks.json
-   deve retornar o JSON correto
+## 3. Sumir com a barra de URL no TWA
 
-Depois disso o Bubblewrap/TWA esconde a barra de URL automaticamente.
+1. Pegue o SHA-256 do seu keystore:
+```powershell
+keytool -list -v -keystore android.keystore -alias android
+```
+
+2. Cole o SHA-256 no arquivo `.well-known/assetlinks.json`
+
+3. Faça commit e deploy na Vercel
+
+4. Teste: https://spark-lider.vercel.app/.well-known/assetlinks.json
+
+## Versões
+- compileSdk: 34
+- targetSdk: 34  
+- buildTools: 34.0.0
+- versionCode: 29
